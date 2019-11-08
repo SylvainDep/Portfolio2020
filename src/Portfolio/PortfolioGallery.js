@@ -14,7 +14,7 @@ const {
 
 const PortfolioGallery = props => {
   return (
-    <Grid>
+    <Grid justify="flex-start">
       <GalleryTile />
       <GalleryTile />
       <GalleryTile />
