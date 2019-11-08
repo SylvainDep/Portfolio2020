@@ -12,7 +12,8 @@ const {
 } = styles;
 
 const AboutTabsContainer = styled.ul`
-  padding: 10px
+  padding: 10px 20px;
+  list-style-type: none;
 
   li:not(:last-child) {
     margin-bottom: 50px;

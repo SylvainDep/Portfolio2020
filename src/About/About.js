@@ -8,7 +8,7 @@ import AboutContent from './AboutContent'
 
 const {
   uiblocks: { ContentBlock, ContentArea, Grid },
-  constants: { dark_grey }
+  constants: { light_grey, dark_grey }
 } = styles;
 
 const AboutContainer = styled.div`
@@ -16,12 +16,13 @@ const AboutContainer = styled.div`
   margin-top: -50px;
   background-color: ${dark_grey};
   width: 100%;
+  padding: 10px;
 `
 
 class Hero extends Component {
   render() {
     return (
-      <ContentBlock>
+      <ContentBlock background={light_grey}>
         <ContentArea>
           <Grid>
             <AboutContainer>

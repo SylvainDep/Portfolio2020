@@ -15,8 +15,8 @@ h1 {
 
 h2 {
   position: relative;
-  padding: 0.83em 0 0.5em;
-  margin: 0;
+  padding-bottom: 0.5em;
+  margin: 0.83em 0 0.83em;
 }
 
 h2:after {
@@ -30,6 +30,7 @@ h2:after {
 }
 
 p {
+  margin-top: 0;
   font-size: .9em;
   line-height: 1.8em;
   font-weight: 300;
