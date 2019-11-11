@@ -14,7 +14,7 @@ const {
 class Portfolio extends Component {
   render() {
     return (
-      <ContentBlock color={dark_grey} section>
+      <ContentBlock section>
         <ContentArea>
           <SectionHeader />
           <PortfolioGallery />

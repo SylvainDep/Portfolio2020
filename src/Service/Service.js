@@ -14,7 +14,7 @@ const {
 class Service extends Component {
   render() {
     return (
-      <ContentBlock color={dark_grey} background={light_grey} section>
+      <ContentBlock background={light_grey} section>
         <ContentArea>
           <SectionHeader />
           <Grid>

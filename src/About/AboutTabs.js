@@ -34,19 +34,20 @@ const AboutTabsContainer = styled.ul`
 `
 
 const AboutTabs = (props) => {
+  console.log(props.active_badge)
   return (
     <AboutTabsContainer>
       <li>
-        <Badge focus size="40px"><FontAwesomeIcon icon={faHome} /></Badge>
+        <Badge focus={props.active_badge.badge1} size="40px"><FontAwesomeIcon icon={faHome} /></Badge>
       </li>
       <li>
-        <Badge size="40px"><FontAwesomeIcon icon={faHome} /></Badge>
+        <Badge focus={props.active_badge.badge2} size="40px"><FontAwesomeIcon icon={faHome} /></Badge>
       </li>
       <li>
-        <Badge size="40px"><FontAwesomeIcon icon={faHome} /></Badge>
+        <Badge focus={props.active_badge.badge3} size="40px"><FontAwesomeIcon icon={faHome} /></Badge>
       </li>
       <li>
-        <Badge size="40px"><FontAwesomeIcon icon={faHome} /></Badge>
+        <Badge focus={props.active_badge.badge4} size="40px"><FontAwesomeIcon icon={faHome} /></Badge>
       </li>
     </AboutTabsContainer>
   )

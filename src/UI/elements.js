@@ -17,6 +17,7 @@ const Badge = styled.div`
   width: ${props => props.size ? props.size : '20px' };
   height: ${props => props.size ? props.size : '20px' };
   background-color: ${props => props.focus ? orange : 'white' };
+  color: ${props => props.focus ? 'white' : dark_grey };
   border-radius: 50%;
   display: flex;
   align-items: center;

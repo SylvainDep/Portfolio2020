@@ -14,7 +14,7 @@ const Fixed = styled.div`
 const ContentBlock = styled.div`
   width: 100vw;
   background-color: ${props => props.background ? props.background : 'white' };
-  color: ${props => props.color ? props.color : 'white' };
+  color: ${props => props.color ? props.color : '#666' };
   padding: ${props => props.section ? '50px 0' : '0'};
 `
 
@@ -35,9 +35,17 @@ const Grid = styled.div`
   width: 100%;
 `
 
+const ContactBlock = styled.div`
+  width: 49%;
+  padding: 15px;
+  background-color: white;
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.5);
+`
+
 export default {
   Fixed,
   ContentBlock,
   ContentArea,
-  Grid
+  Grid,
+  ContactBlock
 }

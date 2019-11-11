@@ -14,7 +14,7 @@ class Navbar extends Component {
   render() {
     return (
       <Fixed>
-        <ContentBlock background={dark_grey}>
+        <ContentBlock color="white" background={dark_grey}>
           <ContentArea>
             <Grid>
               <Logo>Sylvain Depardieu</Logo>

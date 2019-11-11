@@ -20,13 +20,30 @@ const AboutContainer = styled.div`
 `
 
 class Hero extends Component {
+  state = {
+    active_badge: {
+      badge1: true,
+      badge2: false,
+      badge3: false,
+      badge4: false,
+    }
+  }
+
+  toggleBadgeOnHover = (badgeId) => {
+    this.setState(prevState => ({
+      active_badge: {
+        badgeId: !prevState.badgeId
+      }
+    }));
+  }
+
   render() {
     return (
-      <ContentBlock background={light_grey}>
+      <ContentBlock color="white" background={light_grey}>
         <ContentArea>
           <Grid>
             <AboutContainer>
-              <AboutTabs />
+              <AboutTabs active_badge={this.state.active_badge} toggleBadge={this.toggleBadgeOnHover}/>
               <AboutContent />
             </AboutContainer>
           </Grid>

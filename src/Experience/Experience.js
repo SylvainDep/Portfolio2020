@@ -14,7 +14,7 @@ const {
 class Experience extends Component {
   render() {
     return (
-      <ContentBlock background={light_grey} color={dark_grey} section>
+      <ContentBlock background={light_grey} section>
         <ContentArea>
           <SectionHeader />
           <Timeline />
