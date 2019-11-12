@@ -21,8 +21,12 @@ const Tile = styled.div`
     background-color: ${orange};
     color: white;
 
+    h3 {
+      color: white;
+    }
+
     svg {
-      color: white
+      color: white;
     }
   }
 `

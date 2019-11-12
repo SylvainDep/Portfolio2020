@@ -16,6 +16,10 @@ const ContentBlock = styled.div`
   background-color: ${props => props.background ? props.background : 'white' };
   color: ${props => props.color ? props.color : '#666' };
   padding: ${props => props.section ? '50px 0' : '0'};
+
+  h1, h2, h3 {
+    color: ${props => props.color ? props.color : dark_grey };
+  }
 `
 
 const ContentArea = styled.div`

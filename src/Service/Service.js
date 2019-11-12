@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
+import { faRocket } from "@fortawesome/free-solid-svg-icons";
 
 import { styles } from '../UI'
 
@@ -16,7 +17,7 @@ class Service extends Component {
     return (
       <ContentBlock background={light_grey} section>
         <ContentArea>
-          <SectionHeader />
+          <SectionHeader icon={faRocket} title="My Services" />
           <Grid>
             <ServiceTile />
             <ServiceTile />

@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
+import { faBriefcase } from "@fortawesome/free-solid-svg-icons";
 
 import { styles } from '../UI'
 
@@ -16,7 +17,7 @@ class Portfolio extends Component {
     return (
       <ContentBlock section>
         <ContentArea>
-          <SectionHeader />
+          <SectionHeader icon={faBriefcase} title="My Portfolio" />
           <PortfolioGallery />
         </ContentArea>
       </ContentBlock>

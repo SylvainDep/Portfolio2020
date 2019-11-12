@@ -3,7 +3,7 @@ import styled from 'styled-components'
 
 import { styles } from '../UI'
 
-import { faHome } from "@fortawesome/free-solid-svg-icons";
+import { faPaperPlane } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const {
@@ -20,6 +20,7 @@ const InputContainer = styled.div`
     border-radius: 5px;
     transition: all 0.4s ease;
     margin-bottom: 15px;
+    font-size: 0.9em;
 
     &:focus, :hover {
       border: 1px solid ${orange};
@@ -38,6 +39,10 @@ const InputContainer = styled.div`
     padding: 10px 30px;
     font-size: 1em;
     border-radius: 5px;
+
+    svg {
+      margin-right: 10px
+    }
   }
 `
 
@@ -59,7 +64,7 @@ const Form = (props) => {
           <input placeholder="Your Email" />
         </InputArea>
         <textarea rows="6" placeholder="Type Your Message Here"></textarea>
-        <button>Submit</button>
+        <button><FontAwesomeIcon icon={faPaperPlane} color="white" size="l" />Submit</button>
       </InputContainer>
     </ContactBlock>
   )

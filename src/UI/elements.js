@@ -25,7 +25,16 @@ const Badge = styled.div`
   position: relative;
 `
 
+const SocialLinks = styled.div`
+  margin: 20px 10px 10px 0;
+
+  & ${Badge} {
+    margin-right: 10px
+  }
+`
+
 export default {
   Button,
-  Badge
+  Badge,
+  SocialLinks
 }

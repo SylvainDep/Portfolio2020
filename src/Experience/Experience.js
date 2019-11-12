@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
+import { faHistory } from "@fortawesome/free-solid-svg-icons";
 
 import { styles } from '../UI'
 
@@ -16,7 +17,7 @@ class Experience extends Component {
     return (
       <ContentBlock background={light_grey} section>
         <ContentArea>
-          <SectionHeader />
+          <SectionHeader icon={faHistory} title="Work & Education" />
           <Timeline />
         </ContentArea>
       </ContentBlock>

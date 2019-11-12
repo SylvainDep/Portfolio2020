@@ -1,6 +1,5 @@
 import React from 'react'
 import styled from 'styled-components'
-import { faHome } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import { styles } from '../../UI'
@@ -64,9 +63,9 @@ const Separator = styled.div`
 const SectionHeader = props => {
   return (
     <SectionHeaderContainer>
-     <h2>My services</h2>
+     <h2>{props.title}</h2>
      <Separator>
-       <FontAwesomeIcon icon={faHome} color="white" size="xs" />
+       <FontAwesomeIcon icon={props.icon} color="white" size="xs" />
      </Separator>
      <p>ontrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old</p>
     </SectionHeaderContainer>
