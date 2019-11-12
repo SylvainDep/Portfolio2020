@@ -3,7 +3,7 @@ import styled from 'styled-components'
 
 import { styles } from '../UI'
 
-import { faHome } from "@fortawesome/free-solid-svg-icons";
+import { faPhoneAlt, faEnvelope, faMap } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const {
@@ -23,6 +23,23 @@ const ContactDataItem = styled.div`
     margin-right: 20px;
     color: ${orange}
     border: 1px solid #ddd;
+    cursor: pointer;
+    transition-duration: 0.3s;
+
+    &:hover {
+      background-color: ${orange}
+      color: white;
+    }
+  }
+
+  &>div {
+    h3, p {
+      margin: 0;
+    }
+  }
+
+  &:not(:last-child) {
+    margin-bottom: 20px
   }
 `
 
@@ -30,24 +47,24 @@ const ContactData = (props) => {
   return (
     <ContactBlock>
       <ContactDataItem>
-        <FontAwesomeIcon className="contacticon" icon={faHome}/>
+        <FontAwesomeIcon className="contacticon" icon={faPhoneAlt}/>
         <div>
           <h3>Address</h3>
-          <p>+1-202-555-0100,</p>
+          <p>+1-202-555-0100</p>
         </div>
       </ContactDataItem>
       <ContactDataItem>
-        <FontAwesomeIcon className="contacticon" icon={faHome}/>
+        <FontAwesomeIcon className="contacticon" icon={faEnvelope}/>
         <div>
           <h3>Address</h3>
-          <p>+1-202-555-0100,</p>
+          <p>+1-202-555-0100</p>
         </div>
       </ContactDataItem>
       <ContactDataItem>
-        <FontAwesomeIcon className="contacticon" icon={faHome}/>
+        <FontAwesomeIcon className="contacticon" icon={faMap}/>
         <div>
           <h3>Address</h3>
-          <p>+1-202-555-0100,</p>
+          <p>+1-202-555-0100</p>
         </div>
       </ContactDataItem>
     </ContactBlock>

@@ -11,6 +11,17 @@ const Button = styled.a`
   padding: 13px 35px;
   margin: 10px;
   border-radius: 5px;
+  cursor: pointer;
+  transition-duration: 0.3s;
+
+  svg {
+    margin-right: 10px;
+  }
+
+  &:hover {
+    background-color: ${orange};
+    color: white;
+  }
 `
 
 const Badge = styled.div`

@@ -1,5 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
+import { faRocket, faBriefcase } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import { styles } from '../../UI'
 
@@ -20,8 +22,8 @@ const HeroModule = props => {
       <h1>Hey, my name is Sylvain</h1>
       <SubTitle>I am webdevelopper</SubTitle>
       <Grid justify="center">
-        <Button primary>Hire Me</Button>
-        <Button secondary>My Projects</Button>
+        <Button primary><FontAwesomeIcon className="contacticon" icon={faRocket}/>Hire Me</Button>
+        <Button secondary><FontAwesomeIcon className="contacticon" icon={faBriefcase}/>My Projects</Button>
       </Grid>
     </ContentArea>
   )

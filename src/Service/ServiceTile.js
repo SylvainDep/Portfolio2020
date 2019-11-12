@@ -1,6 +1,5 @@
 import React from 'react'
 import styled from 'styled-components'
-import { faHome } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import { styles } from '../UI'
@@ -34,9 +33,9 @@ const Tile = styled.div`
 const ServiceTile = props => {
   return (
     <Tile>
-      <FontAwesomeIcon icon={faHome} color={dark_grey} size="3x" />
-      <h3>Webdevelopment</h3>
-      <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some</p>
+      <FontAwesomeIcon icon={props.icon} color={dark_grey} size="3x" />
+      <h3>{props.title}</h3>
+      <p>{props.text}</p>
     </Tile>
   )
 }
