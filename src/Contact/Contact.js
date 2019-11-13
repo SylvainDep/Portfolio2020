@@ -15,7 +15,10 @@ class Contact extends Component {
     return (
       <ContentBlock section>
         <ContentArea>
-          <SectionHeader icon={faStar} title="Get in touch!" />
+          <SectionHeader
+            icon={faStar}
+            title="Get in touch!"
+            text="If you want to know more about me, my work or if youʼre a Nigerian prince who wants to offer me a lot of money, feel free to contact me." />
           <ContactContainer />
         </ContentArea>
       </ContentBlock>

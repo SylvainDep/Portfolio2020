@@ -15,7 +15,10 @@ class Portfolio extends Component {
     return (
       <ContentBlock section>
         <ContentArea>
-          <SectionHeader icon={faBriefcase} title="My Portfolio" />
+          <SectionHeader
+            icon={faBriefcase}
+            title="My Portfolio"
+            text="Here is a sample of various projects I took part in, professional and/or personal" />
           <PortfolioGallery />
         </ContentArea>
       </ContentBlock>

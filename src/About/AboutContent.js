@@ -41,14 +41,30 @@ const AboutContent = (props) => {
             <img src={require('../assets/img/profile.jpg')} alt="profile" />
           </ProfilePicture>
           <ProfileContent>
-            <p>I’M A WEB DEVELOPPER from France living in Hamburg (Germany), where I work as Frontend Developper at Sendesignal. With a background in SEO and Language Studies, my strength lies in website development, optimization and scaling.</p>
-            <p>If you want to know more about me, my work or if youʼre a Nigerian prince who wants to offer me a lot of money, feel free to contact me on sylvaindepardieu78@gnail.com.</p>
+            <p><b>I’M A WEB DEVELOPPER</b> from France living in Hamburg (Germany), where I work as Frontend Developper at Sendesignal. With a background in SEO, content management and Language Studies, I have developped my skills in Frontend development and loved it ever since.</p>
+            <p>I particularly enjoy the feeling of bringing a paper project to life, and making it usable and scalable to see it evolve and meet both owners and final user wishes. This leads me to consider all the aspects of a project in details from the beginning, and to come up with a solution to all of them.</p>
             <SocialLinks>
               <Grid justify="flex-start">
-                <Badge size="30px"><FontAwesomeIcon icon={faLinkedin} /></Badge>
-                <Badge size="30px"><FontAwesomeIcon icon={faXing} /></Badge>
-                <Badge size="30px"><FontAwesomeIcon icon={faGithub} /></Badge>
-                <Badge size="30px"><FontAwesomeIcon icon={faEnvelope} /></Badge>
+                <a href="https://www.linkedin.com/in/sylvaindepardieu/" target="_blank">
+                  <Badge size="30px">
+                    <FontAwesomeIcon icon={faLinkedin} />
+                  </Badge>
+                </a>
+                <a href="https://www.xing.com/profile/Sylvain_Depardieu" target="_blank">
+                  <Badge size="30px">
+                    <FontAwesomeIcon icon={faXing} />
+                  </Badge>
+                </a>
+                <a href="https://github.com/SylvainDep" target="_blank">
+                  <Badge size="30px">
+                    <FontAwesomeIcon icon={faGithub} />
+                  </Badge>
+                </a>
+                <a href="mailto:sylvaindepardieu78@gmail.com" target="_blank">
+                  <Badge size="30px">
+                    <FontAwesomeIcon icon={faEnvelope} />
+                  </Badge>
+                </a>
               </Grid>
             </SocialLinks>
           </ProfileContent>

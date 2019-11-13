@@ -16,7 +16,10 @@ class Experience extends Component {
     return (
       <ContentBlock background={light_grey} section>
         <ContentArea>
-          <SectionHeader icon={faHistory} title="Work & Education" />
+          <SectionHeader
+            icon={faHistory}
+            title="Work & Education"
+            text="More than 5 years of experience and expertise in the web industry to help you reach your goals." />
           <Timeline />
         </ContentArea>
       </ContentBlock>

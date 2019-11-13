@@ -17,7 +17,10 @@ class Service extends Component {
     return (
       <ContentBlock background={light_grey} section>
         <ContentArea>
-          <SectionHeader icon={faRocket} title="My Services" />
+          <SectionHeader
+            icon={faRocket}
+            title="My Services"
+            text="From conception to publication, I can intervene a any step of your project and bring it to the next level." />
           <Grid vertical="stretch">
             <ServiceTile
               icon={faCode}
@@ -26,11 +29,11 @@ class Service extends Component {
             <ServiceTile
               icon={faPencilRuler}
               title="Webdesign"
-              text="Having a website build to be handy AND beautiful is a must today. No matter what your communications needs are."/>
+              text="Having a website build to be handy AND beautiful is a must today. No matter what your communications needs are"/>
             <ServiceTile
               icon={faMobileAlt}
               title="Responsive"
-              text="Make your website not only accessible, but also optimized for any kind of device or screen size."/>
+              text="Make your website not only accessible, but also optimized for any kind of device or screen size from which it will be seen"/>
             <ServiceTile
               icon={faGoogle}
               title="SEO"

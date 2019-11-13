@@ -30,24 +30,26 @@ const GalleryItemFrame = styled.div`
     content: "";
     display: block;
     position: absolute;
-    width: 60%;
+    width: 0%;
     height: 2px;
     background-color: white;
     bottom: 20px;
     left: 50%;
-    transform: translateX(-50%)
+    transform: translateX(-50%);
+    transition-duration: 0.5s;
   }
 
   &:after {
     content: "";
     display: block;
     position: absolute;
-    width: 60%;
+    width: 0%;
     height: 2px;
     background-color: white;
     top: 20px;
     left: 50%;
-    transform: translateX(-50%)
+    transform: translateX(-50%);
+    transition-duration: 0.5s;
   }
 
   h3, p {
@@ -62,12 +64,13 @@ const GalleryItemContent = styled.div`
   opacity: 0;
   height: 100%;
   width: 100%;
-  background-color: rgba(242, 120, 75, .9); 
+  background-color: rgba(242, 120, 75, 1);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   color: white;
+  transition-duration: 0.3s;
 
   h3 {
     color: white;
@@ -75,26 +78,62 @@ const GalleryItemContent = styled.div`
 
   &:hover {
     opacity: 1;
+
+    &:before {
+      height: 60%;
+    }
+
+    &:after {
+      height: 60%;
+    }
+
+    ${GalleryItemFrame} {
+      &:before {
+        content: "";
+        display: block;
+        position: absolute;
+        width: 60%;
+        height: 2px;
+        background-color: white;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%)
+      }
+
+      &:after {
+        content: "";
+        display: block;
+        position: absolute;
+        width: 60%;
+        height: 2px;
+        background-color: white;
+        top: 20px;
+        left: 50%;
+        transform: translateX(-50%)
+      }
+    }
   }
 
   &:before {
     content: "";
     display: block;
     position: absolute;
-    height: 60%;
+    height: 0%;
     width: 2px;
     background-color: white;
     left: 20px;
+    transition-duration: 0.5s;
   }
 
   &:after {
     content: "";
     display: block;
     position: absolute;
-    height: 60%;
+    height: 0%;
     width: 2px;
     background-color: white;
     right: 20px;
+    transition-duration: 0.5s;
   }
 `
 

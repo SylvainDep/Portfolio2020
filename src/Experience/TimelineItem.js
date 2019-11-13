@@ -56,7 +56,7 @@ const TimelineItem = (props) => {
   return (
     <TimelineItemContainer>
       <TimelineText data={props.data}/>
-      <TimelineDate />
+      <TimelineDate data={props.data}/>
     </TimelineItemContainer>
   )
 }

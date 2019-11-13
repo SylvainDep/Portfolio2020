@@ -39,7 +39,7 @@ const Badge = styled.div`
 const SocialLinks = styled.div`
   margin: 20px 10px 10px 0;
 
-  & ${Badge} {
+  & a {
     margin-right: 10px
   }
 `

@@ -1,6 +1,15 @@
 import React from 'react'
 import styled from 'styled-components'
 
+import { faHome, faCalendar } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
+import { styles } from '../UI'
+
+const {
+  constants: { orange }
+} = styles;
+
 const TimelineTextBlock = styled.div`
   padding: 15px;
   background-color: white;
@@ -28,7 +37,21 @@ const TimelineTextBlock = styled.div`
 
 const TimelineDetails = styled.div`
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
+
+  .location, .date {
+    display: flex;
+    align-items: center;
+  }
+
+  .location {
+    margin-right: 20px;
+  }
+
+  svg {
+    margin-right: 5px;
+    color: ${orange}
+  }
 `
 
 const TimelineText = (props) => {
@@ -36,8 +59,14 @@ const TimelineText = (props) => {
     <TimelineTextBlock>
       <h3>{props.data.title}</h3>
       <TimelineDetails>
-        <i>{props.data.city}, {props.data.country}</i>
-        <i>{props.data.startDate} - {props.data.endDate}</i>
+        <div className="location">
+          <FontAwesomeIcon icon={faHome} color="white" size="xs" />
+          <i>{props.data.city}, {props.data.country}</i>
+        </div>
+        <div className="date">
+          <FontAwesomeIcon icon={faCalendar} color="white" size="xs" />
+          <i>{props.data.startDate} - {props.data.endDate}</i>
+        </div>
       </TimelineDetails>
       <ul>
         <li>{props.data.tasks[0]}</li>
