@@ -1,18 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import { styles } from '../UI'
-
-import { faHome } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-
 import TimelineText from './TimelineText'
 import TimelineDate from './TimelineDate'
-
-const {
-  elements: { Badge },
-  constants: { orange }
-} = styles;
 
 const TimelineItemContainer = styled.div`
   display: flex;
@@ -65,7 +55,7 @@ const TimelineItemContainer = styled.div`
 const TimelineItem = (props) => {
   return (
     <TimelineItemContainer>
-      <TimelineText />
+      <TimelineText data={props.data}/>
       <TimelineDate />
     </TimelineItemContainer>
   )

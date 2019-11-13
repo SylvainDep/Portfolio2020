@@ -1,8 +1,7 @@
 import styled from 'styled-components';
 
 import {
-  dark_grey,
-  orange
+  dark_grey
 } from "./constants";
 
 const Fixed = styled.div`

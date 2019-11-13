@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
 
-import { styles } from '../UI'
 import Navbar from './Navbar/Navbar'
 import HeroModule from './HeroModule/HeroModule'
 import bgImg from '../assets/img/personal-bg.jpg';

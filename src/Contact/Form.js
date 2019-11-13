@@ -8,7 +8,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const {
   uiblocks: { ContactBlock },
-  elements: { Badge },
   constants: { orange }
 } = styles;
 
@@ -64,7 +63,7 @@ const Form = (props) => {
           <input placeholder="Your Email" />
         </InputArea>
         <textarea rows="6" placeholder="Type Your Message Here"></textarea>
-        <button><FontAwesomeIcon icon={faPaperPlane} color="white" size="l" />Submit</button>
+        <button><FontAwesomeIcon icon={faPaperPlane} color="white" />Submit</button>
       </InputContainer>
     </ContactBlock>
   )

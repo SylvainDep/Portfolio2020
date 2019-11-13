@@ -3,13 +3,8 @@ import styled from 'styled-components'
 
 import { styles } from '../UI'
 
-import { faHome } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-
 const {
-  uiblocks: { ContentBlock, ContentArea },
-  elements: { Badge },
-  constants: { orange }
+  uiblocks: { ContentBlock, ContentArea }
 } = styles;
 
 const FooterArea = styled.div`

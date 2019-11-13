@@ -8,15 +8,44 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const {
   uiblocks: { ContactBlock },
-  elements: { Badge },
   constants: { orange }
 } = styles;
 
 const ContactDataItem = styled.div`
   display: flex;
-  align-items: center
+  align-items: center;
+
+  .contacticonholder {
+    display: block;
+    position: relative;
+
+    &:before {
+      content: 'Copy to clipboard';
+      display: block;
+      position: absolute;
+      left: 20px;
+      transform: translateX(-50%);
+      top: -30px;
+      background-color: ${orange};
+      color: white;
+      text-align: center;
+      font-size: .7em;
+      padding: 2px 5px;
+      border-radius: 2px;
+      opacity: 0;
+      transition-duration: 0.3s;
+    }
+
+    &:hover {
+      &:before {
+        opacity: 1;
+      }
+    }
+  }
 
   .contacticon {
+    position: relative;
+    display: block;
     padding: 10px;
     height: 40px;
     width: 40px;
@@ -29,6 +58,7 @@ const ContactDataItem = styled.div`
     &:hover {
       background-color: ${orange}
       color: white;
+      border: 1px solid ${orange};
     }
   }
 
@@ -47,24 +77,39 @@ const ContactData = (props) => {
   return (
     <ContactBlock>
       <ContactDataItem>
-        <FontAwesomeIcon className="contacticon" icon={faPhoneAlt}/>
+        <div className="contacticonholder">
+          <FontAwesomeIcon
+            onClick={() => {navigator.clipboard.writeText('+49-176-45734734')}}
+            className="contacticon"
+            icon={faPhoneAlt} />
+        </div>
         <div>
-          <h3>Address</h3>
-          <p>+1-202-555-0100</p>
+          <h3>Phone</h3>
+          <p>+49-176-45734734</p>
         </div>
       </ContactDataItem>
       <ContactDataItem>
-        <FontAwesomeIcon className="contacticon" icon={faEnvelope}/>
+        <div className="contacticonholder">
+          <FontAwesomeIcon
+            onClick={() => {navigator.clipboard.writeText('sylvaindepardieu78@gmail.com')}}
+            className="contacticon"
+            icon={faEnvelope} />
+        </div>
         <div>
-          <h3>Address</h3>
-          <p>+1-202-555-0100</p>
+          <h3>Email</h3>
+          <p>sylvaindepardieu78@gmail.com</p>
         </div>
       </ContactDataItem>
       <ContactDataItem>
-        <FontAwesomeIcon className="contacticon" icon={faMap}/>
+        <div className="contacticonholder">
+          <FontAwesomeIcon
+            onClick={() => {navigator.clipboard.writeText('Langenfelder Damm 70, 22525 Hamburg')}}
+            className="contacticon"
+            icon={faMap} />
+        </div>
         <div>
           <h3>Address</h3>
-          <p>+1-202-555-0100</p>
+          <p>Langenfelder Damm 70, 22525 Hamburg</p>
         </div>
       </ContactDataItem>
     </ContactBlock>

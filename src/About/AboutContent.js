@@ -1,7 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
 import { styles } from '../UI'
-import { fab } from '@fortawesome/free-brands-svg-icons'
 import { faGithub, faXing, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -39,11 +38,11 @@ const AboutContent = (props) => {
       <div>
         <Grid vertical="flex-start">
           <ProfilePicture>
-            <img src={require('../assets/img/profile.jpg')}/>
+            <img src={require('../assets/img/profile.jpg')} alt="profile" />
           </ProfilePicture>
           <ProfileContent>
-            <p>Welcome to my website. sit amet, consectetur adipiscing elit. Ut a lectus eu leo faucibus aliquam. Suspendisse eleifend fringilla nibh. Praesent ut luctus dolor. Suspendisse a rutrum arcu. Aliquam erat volutpat. Phasellus lobortis erat vitae fringilla malesuada. Fusce semper purus suscipit ultricies tincidunt. Nulla eget turpis ac leo euismod pharetra at nec diam. Etiam id purus lacus. Suspendisse ligula nulla, cursus non lacinia tincidunt, elementum eu sapien. Morbi mollis congue fringilla. Vivamus ac sagittis nunc.</p>
-            <p>Welcome to my website. sit amet, consectetur adipiscing elit. Ut a lectus eu leo faucibus aliquam. Suspendisse eleifend fringilla nibh. Praesent ut luctus dolor. Suspendisse a rutrum arcu. Aliquam erat volutpat. Phasellus lobortis erat vitae fringilla malesuada. Fusce semper</p>
+            <p>I’M A WEB DEVELOPPER from France living in Hamburg (Germany), where I work as Frontend Developper at Sendesignal. With a background in SEO and Language Studies, my strength lies in website development, optimization and scaling.</p>
+            <p>If you want to know more about me, my work or if youʼre a Nigerian prince who wants to offer me a lot of money, feel free to contact me on sylvaindepardieu78@gnail.com.</p>
             <SocialLinks>
               <Grid justify="flex-start">
                 <Badge size="30px"><FontAwesomeIcon icon={faLinkedin} /></Badge>

@@ -3,11 +3,7 @@ import styled from 'styled-components'
 
 import { styles } from '../UI'
 
-import { faHome } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-
 const {
-  elements: { Badge },
   constants: { orange }
 } = styles;
 

@@ -3,13 +3,9 @@ import styled from 'styled-components'
 
 import { styles } from '../UI'
 
-import { faHome } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-
 import TimelineItem from './TimelineItem'
 
 const {
-  elements: { Badge },
   constants: { orange }
 } = styles;
 
@@ -34,11 +30,37 @@ const TimelineContainer = styled.div`
 `
 
 const Timeline = (props) => {
+  const experiences = {
+    sendesignal: {
+      title: 'Sendesignal',
+      startDate: 'Aug 2019',
+      endDate: 'Today',
+      city: 'Hamburg',
+      country: 'Germany',
+      tasks: [
+        'Development of banking product Finders with vanilla JS',
+        'Implementation of new features/Optimization in existing Finders',
+        'Developped the use of the modern adequate tech with React'
+      ]
+    },
+    jimdo: {
+      title: 'Jimdo',
+      startDate: 'Nov 2014',
+      endDate: 'May 2019',
+      city: 'Hamburg',
+      country: 'Germany',
+      tasks: [
+        'Cross Platform SEO: Optimization of in-site content as well as in surrounding services, such as Youtube (production and publication of multiple videos)',
+        'Implementation of new features/Optimization in existing Finders',
+        'Developped the use of the modern adequate tech with React'
+      ]
+    },
+  }
+
   return (
     <TimelineContainer>
-      <TimelineItem />
-      <TimelineItem />
-      <TimelineItem />
+      <TimelineItem data={experiences.sendesignal}/>
+      <TimelineItem data={experiences.jimdo}/>
     </TimelineContainer>
   )
 }
