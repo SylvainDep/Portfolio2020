@@ -45,7 +45,7 @@ const TimelineDetails = styled.div`
   }
 
   .location {
-    margin-right: 20px;
+    margin-right: 12px;
   }
 
   svg {

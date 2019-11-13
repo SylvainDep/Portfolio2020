@@ -86,7 +86,7 @@ class Timeline extends Component {
       startDate: 'Sep 2011',
       endDate: 'Jul 2013',
       dateTag: '2011 - 2013',
-      city: 'Paris 13 (Paris Austerlitz)',
+      city: 'Paris 13',
       country: 'France',
       tasks: [
         'POS material structuring, positionning and optimizing ; Orientation and global information for international clientele',
@@ -99,7 +99,7 @@ class Timeline extends Component {
       startDate: 'Sep 2011',
       endDate: 'Jul 2013',
       dateTag: '2011 - 2013',
-      city: 'Levallois-Perret',
+      city: 'Levallois-P.',
       country: 'France',
       tasks: [
         'Sandwich course training, completed along at the SNCF',
