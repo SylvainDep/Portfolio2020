@@ -5,6 +5,7 @@ import Hero from './Hero/Hero'
 import About from './About/About'
 import Service from './Service/Service'
 import Portfolio from './Portfolio/Portfolio'
+import Skills from './Skills/Skills'
 import Experience from './Experience/Experience'
 import Contact from './Contact/Contact'
 import Footer from './Footer/Footer'
@@ -16,6 +17,7 @@ function App() {
       <About />
       <Service />
       <Portfolio />
+      <Skills />
       <Experience />
       <Contact />
       <Footer />

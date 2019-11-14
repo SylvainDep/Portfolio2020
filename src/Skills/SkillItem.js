@@ -1,0 +1,55 @@
+import React from 'react'
+import styled from 'styled-components'
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
+import { styles } from '../UI'
+
+const {
+  constants: { dark_grey, orange }
+} = styles;
+
+const SkillItemContainer = styled.div`
+  flex-basis: 50%
+`
+
+const SkillBar = styled.div`
+  display: block;
+  position: relative;
+  height: 5px;
+  width: calc(100% - 50px);
+  background-color: white;
+
+  &:before {
+    content: '';
+    display: block;
+    height: 5px;
+    width: ${props => props.level}%;
+    background-color: ${orange};
+  }
+
+  &:after {
+    content: '${props => props.level}%';
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: ${props => props.level}%;
+    background-color: ${orange};
+  }
+`
+
+const SkillItem = props => {
+  return (
+    <SkillItemContainer>
+      <h3>Salut</h3>
+      <SkillBar level={props.level} />
+    </SkillItemContainer>
+  )
+}
+
+export default SkillItem
