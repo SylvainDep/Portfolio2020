@@ -20,7 +20,7 @@ class Service extends Component {
           <SectionHeader
             icon={faRocket}
             title="My Services"
-            text="From conception to publication, I can intervene a any step of your project and bring it to the next level." />
+            text="From conception to publication, I can step in at any step of your project and bring it to the next level." />
           <Grid vertical="stretch">
             <ServiceTile
               icon={faCode}
