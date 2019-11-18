@@ -38,8 +38,7 @@ const ContentArea = styled.div`
   margin: auto;
   width: 1170px;
   max-width: 100%;
-  padding: 0 10px;
-
+  padding: ${props => props.section ? '30px' : '0 10px'};
 `
 
 const Grid = styled.div`

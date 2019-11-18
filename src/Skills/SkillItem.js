@@ -29,6 +29,7 @@ const SkillBar = styled.div`
 
   &:after {
     content: '${props => props.level}%';
+    font-size: .9em;
     height: 40px;
     width: 40px;
     border-radius: 50%;
@@ -37,8 +38,8 @@ const SkillBar = styled.div`
     align-items: center;
     position: absolute;
     top: 50%;
-    transform: translateY(-50%);
     left: ${props => props.level}%;
+    transform: translate(-50%, -50%);
     background-color: ${orange};
   }
 `
@@ -46,7 +47,7 @@ const SkillBar = styled.div`
 const SkillItem = props => {
   return (
     <SkillItemContainer>
-      <h3>Salut</h3>
+      <h3>{props.title}</h3>
       <SkillBar level={props.level} />
     </SkillItemContainer>
   )

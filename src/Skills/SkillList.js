@@ -18,14 +18,14 @@ const SkillsContainer = styled.div`
 const SkillList = props => {
   return (
     <SkillsContainer>
-      <SkillItem level={40}/>
-      <SkillItem/>
-      <SkillItem/>
-      <SkillItem/>
-      <SkillItem/>
-      <SkillItem/>
-      <SkillItem/>
-      <SkillItem/>
+      <SkillItem title="HTML5/CSS3" level={95} />
+      <SkillItem title="Javascript ES6" level={70} />
+      <SkillItem title="ReactJS" level={55} />
+      <SkillItem title="PHP/MySQL" level={40} />
+      <SkillItem title="Git" level={67} />
+      <SkillItem title="Jimdo" level={100} />
+      <SkillItem title="Wordpress" level={58} />
+      <SkillItem title="Adobe Developper Suite" level={64} />
     </SkillsContainer>
   )
 }

@@ -16,7 +16,7 @@ h1 {
 h2 {
   position: relative;
   padding-bottom: 0.5em;
-  margin: 0.83em 0 0.83em;
+  margin: 0 0 0.83em;
 }
 
 h2:after {
