@@ -4,6 +4,12 @@ import styled from 'styled-components'
 import TimelineText from './TimelineText'
 import TimelineDate from './TimelineDate'
 
+import { styles } from '../UI'
+
+const {
+  constants: { mobile_width }
+} = styles;
+
 const TimelineItemContainer = styled.div`
   display: flex;
   position: relative;
@@ -49,6 +55,34 @@ const TimelineItemContainer = styled.div`
       content: "";
       position: absolute;
     }
+
+    @media screen and (max-width: ${mobile_width}) {
+      flex-direction: row-reverse;
+
+      & div:before {
+        width: 0;
+        border: 15px solid transparent;
+        border-right-color: #ccc;
+        left: -31px;
+        top: 29px;
+        content: "";
+        position: absolute;
+      }
+
+      & div:after {
+        width: 0;
+        border: 15px solid transparent;
+        border-right-color: #fff;
+        left: -30px;
+        top: 26px;
+        content: "";
+        position: absolute;
+      }
+    }
+  }
+
+  @media screen and (max-width: ${mobile_width}) {
+    margin: 10px 0;
   }
 `
 

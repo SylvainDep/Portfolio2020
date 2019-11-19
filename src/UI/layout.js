@@ -59,11 +59,16 @@ const Grid = styled.div`
 `
 
 const ContactBlock = styled.div`
-  width: 49%;
+  flex-basis: 49%;
   padding: 15px;
   background-color: white;
   box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.5);
   z-index: 5;
+  position: relative;
+
+  @media screen and (max-width: ${mobile_width}) {
+    margin: 20px 0;
+  }
 `
 
 export default {

@@ -10,7 +10,7 @@ import ContactBG from '../assets/img/clients-bg.jpg'
 
 const {
   uiblocks: { ContentBlock, ContentArea, Grid },
-  constants: { orange }
+  constants: { orange, mobile_width }
 } = styles;
 
 const ContactBackground = styled.div`
@@ -38,11 +38,25 @@ const ContactBackground = styled.div`
 `
 
 const Partner = styled.a`
+  max-width: 100%;
   display: block;
 
   img {
+    max-width: 80%;
     max-height: 80px;
     opacity: .7;
+    margin: auto
+  }
+
+  @media screen and (max-width: ${mobile_width}) {
+    width: 100%;
+    margin: 10px 0;
+
+    img {
+      display: block;
+      margin: auto;
+      height: 50px;
+    }
   }
 `
 

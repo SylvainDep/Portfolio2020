@@ -7,7 +7,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { styles } from '../UI'
 
 const {
-  constants: { orange }
+  constants: { orange, mobile_width }
 } = styles;
 
 const TimelineTextBlock = styled.div`
@@ -32,6 +32,10 @@ const TimelineTextBlock = styled.div`
     li {
       margin-bottom: 5px;
     }
+  }
+
+  @media screen and (max-width: ${mobile_width}) {
+    width: calc(100% - 80px);
   }
 `
 

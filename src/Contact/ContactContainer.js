@@ -11,7 +11,7 @@ const {
 
 const ContactContainer = (props) => {
   return (
-    <Grid vertical="flex-start">
+    <Grid vertical="flex-start" responsive>
       <Form />
       <ContactData />
     </Grid>

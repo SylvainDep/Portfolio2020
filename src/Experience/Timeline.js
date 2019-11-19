@@ -7,7 +7,7 @@ import TimelineItem from './TimelineItem'
 
 const {
   elements: { Button },
-  constants: { orange }
+  constants: { orange, mobile_width }
 } = styles;
 
 const TimelineContainer = styled.div`
@@ -28,6 +28,11 @@ const TimelineContainer = styled.div`
     transform: translateX(-50%);
     top: 0;
     border-radius: 5px;
+
+    @media screen and (max-width: ${mobile_width}) {
+      left: 30px;
+      transform: translateX(-50%);
+    }
   }
 
   ${Button} {
@@ -37,6 +42,11 @@ const TimelineContainer = styled.div`
     transform: translateX(-50%);
     text-align: center;
     margin: 0;
+
+    @media screen and (max-width: ${mobile_width}) {
+      left: 0;
+      transform: translateX(0);
+    }
   }
 `
 

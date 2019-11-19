@@ -4,7 +4,7 @@ import styled from 'styled-components'
 import { styles } from '../UI'
 
 const {
-  constants: { orange }
+  constants: { orange, mobile_width }
 } = styles;
 
 const Date = styled.span`
@@ -18,6 +18,11 @@ const Date = styled.span`
   background-color: ${orange};
   border-radius: 3px;
   color: white;
+
+  @media screen and (max-width: ${mobile_width}) {
+    left: 0;
+    transform: translateX(0);
+  }
 `
 
 const TimelineDate = (props) => {

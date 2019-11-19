@@ -10,7 +10,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const {
   uiblocks: { ContactBlock },
-  constants: { orange }
+  constants: { orange, mobile_width }
 } = styles;
 
 const InputContainer = styled.div`
@@ -53,6 +53,14 @@ const InputArea = styled.div`
 
   input {
     width: 48%;
+  }
+
+  @media screen and (max-width: ${mobile_width}) {
+    display: block;
+
+    input {
+      width: 100%;
+    }
   }
 `
 
