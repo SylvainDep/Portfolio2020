@@ -15,6 +15,8 @@ const ContentBlock = styled.div`
   background-color: ${props => props.background ? props.background : 'white' };
   color: ${props => props.color ? props.color : '#666' };
   padding: ${props => props.section ? '50px 0' : '0'};
+  position: relative;
+  margin-bottom: ${props => props.contact ? '180px' : '0'};
 
   h1, h2, h3 {
     color: ${props => props.color ? props.color : dark_grey };
@@ -55,6 +57,7 @@ const ContactBlock = styled.div`
   padding: 15px;
   background-color: white;
   box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.5);
+  z-index: 5;
 `
 
 export default {

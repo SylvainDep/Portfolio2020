@@ -73,6 +73,11 @@ const ContactDataItem = styled.div`
   }
 `
 
+const ContactNotes = styled.i`
+  text-align: center;
+  font-size: .8em;
+`
+
 const ContactData = (props) => {
   return (
     <ContactBlock>
@@ -112,6 +117,7 @@ const ContactData = (props) => {
           <p>Langenfelder Damm 70, 22525 Hamburg</p>
         </div>
       </ContactDataItem>
+      <ContactNotes>I can read and answer to your messages in French, English and German</ContactNotes>
     </ContactBlock>
   )
 }
