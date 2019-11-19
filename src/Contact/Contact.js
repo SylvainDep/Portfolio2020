@@ -49,7 +49,7 @@ const Partner = styled.a`
 class Contact extends Component {
   render() {
     return (
-      <ContentBlock section contact>
+      <ContentBlock id="contact" section contact>
         <ContentArea>
           <SectionHeader
             icon={faStar}

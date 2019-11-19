@@ -14,7 +14,7 @@ const {
 class Experience extends Component {
   render() {
     return (
-      <ContentBlock background={light_grey} section>
+      <ContentBlock id="experience" background={light_grey} section>
         <ContentArea>
           <SectionHeader
             icon={faHistory}

@@ -15,7 +15,7 @@ const {
 class Skills extends Component {
   render() {
     return (
-      <CustomContentBlock bgImg={require('../assets/img/skills.jpg')} color="white" section>
+      <CustomContentBlock id="skills" bgImg={require('../assets/img/skills.jpg')} color="white" section>
         <ContentArea background="rgba(0, 0, 0, .5)" section>
           <SectionHeader
             icon={faRocket}

@@ -1,5 +1,6 @@
-import React from 'react'
+import React, { Component } from 'react'
 import styled from 'styled-components'
+import SmoothScrolling from "../../UI/shared/SmoothScrolling";
 
 import { styles } from '../../UI'
 
@@ -47,15 +48,32 @@ const MenuItem = styled.li`
   }
 `
 
-const Menu = props => {
-  return (
-    <MenuBlock>
-      <MenuItem><span>Home</span></MenuItem>
-      <MenuItem><span>Projects</span></MenuItem>
-      <MenuItem><span>Experience</span></MenuItem>
-      <MenuItem><span>Contact</span></MenuItem>
-    </MenuBlock>
-  )
+class Menu extends Component {
+  scrollHandler = (anchor) => {
+    SmoothScrolling.scrollTo(anchor);
+  }
+
+  render() {
+    return (
+      <MenuBlock>
+        <MenuItem>
+          <a onClick={() => this.scrollHandler("services")}>Services</a>
+        </MenuItem>
+        <MenuItem>
+          <a onClick={() => this.scrollHandler("projects")}>Projects</a>
+        </MenuItem>
+        <MenuItem>
+          <a onClick={() => this.scrollHandler("skills")}>Skills</a>
+        </MenuItem>
+        <MenuItem>
+          <a onClick={() => this.scrollHandler("experience")}>Experience</a>
+        </MenuItem>
+        <MenuItem>
+          <a onClick={() => this.scrollHandler("contact")}>Contact</a>
+        </MenuItem>
+      </MenuBlock>
+    )
+  }
 }
 
 export default Menu

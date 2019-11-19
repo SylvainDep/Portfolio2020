@@ -13,7 +13,7 @@ const {
 class Portfolio extends Component {
   render() {
     return (
-      <ContentBlock section>
+      <ContentBlock id="projects" section>
         <ContentArea>
           <SectionHeader
             icon={faBriefcase}
