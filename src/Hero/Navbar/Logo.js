@@ -11,6 +11,7 @@ const LogoLink = styled.a`
   display: flex;
   align-items: center;
   font-size: 1.2em;
+  margin: 8px 0;
 
   &:before {
     content: '';

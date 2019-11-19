@@ -75,13 +75,13 @@ class Contact extends Component {
           <ContentArea>
             <Grid>
               <Partner href="https://malignec.transilien.com/" target="_blank">
-                <img src={require('../assets/img/sncf.png')} alt="profile" />
+                <img src={require('../assets/img/sncf.png')} alt="SNCF" />
               </Partner>
               <Partner href="https://www.jimdo.com/fr/" target="_blank">
-                <img src={require('../assets/img/jimdo_bw.png')} alt="profile" />
+                <img src={require('../assets/img/jimdo_bw.png')} alt="Jimdo" />
               </Partner>
               <Partner href="https://sendesignal.de/" target="_blank">
-                <img src={require('../assets/img/sendesignal.png')} alt="profile" />
+                <img src={require('../assets/img/sendesignal.png')} alt="Sendesignal" />
               </Partner>
             </Grid>
           </ContentArea>
