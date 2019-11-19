@@ -36,7 +36,7 @@ const AboutContent = (props) => {
     <AboutContentContainer>
       <h2>About me</h2>
       <div>
-        <Grid vertical="flex-start">
+        <Grid vertical="flex-start" responsive>
           <ProfilePicture>
             <img src={require('../assets/img/profile.jpg')} alt="profile" />
           </ProfilePicture>

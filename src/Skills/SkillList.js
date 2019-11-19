@@ -7,12 +7,16 @@ import SkillItem from './SkillItem'
 import { styles } from '../UI'
 
 const {
-  constants: { dark_grey, orange }
+  constants: { dark_grey, orange, mobile_width }
 } = styles;
 
 const SkillsContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
+
+  @media screen and (max-width: ${mobile_width}) {
+    display: block;
+  }
 `
 
 const SkillList = props => {

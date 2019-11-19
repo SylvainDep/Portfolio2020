@@ -1,7 +1,8 @@
 import styled from 'styled-components';
 
 import {
-  dark_grey
+  dark_grey,
+  mobile_width
 } from "./constants";
 
 const Fixed = styled.div`
@@ -50,6 +51,11 @@ const Grid = styled.div`
   align-items: ${props => props.vertical ? props.vertical : 'center' };
   height: 100%;
   width: 100%;
+
+
+  @media screen and (max-width: ${mobile_width}) {
+    ${props => props.responsive ? 'display: block' : ''}
+  }
 `
 
 const ContactBlock = styled.div`

@@ -5,7 +5,7 @@ import styled from 'styled-components'
 import { styles } from '../UI'
 
 const {
-  constants: { orange }
+  constants: { orange, mobile_width }
 } = styles;
 
 const GalleryItem = styled.div`
@@ -15,6 +15,11 @@ const GalleryItem = styled.div`
   background: url(${props => props.bgImg}) no-repeat center center;
   background-size: 100%;
   position: relative;
+
+  @media screen and (max-width: ${mobile_width}) {
+    flex-basis: 50%;
+    padding-bottom: 50%;
+  }
 `
 
 const GalleryItemFrame = styled.div`

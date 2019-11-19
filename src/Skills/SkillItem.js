@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { styles } from '../UI'
 
 const {
-  constants: { dark_grey, orange }
+  constants: { dark_grey, orange, mobile_width }
 } = styles;
 
 const SkillItemContainer = styled.div`
@@ -41,6 +41,10 @@ const SkillBar = styled.div`
     left: ${props => props.level}%;
     transform: translate(-50%, -50%);
     background-color: ${orange};
+  }
+
+  @media screen and (max-width: ${mobile_width}) {
+    width: 100%;
   }
 `
 

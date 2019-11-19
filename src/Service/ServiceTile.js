@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { styles } from '../UI'
 
 const {
-  constants: { dark_grey, orange }
+  constants: { dark_grey, orange, mobile_width }
 } = styles;
 
 const Tile = styled.div`
@@ -27,6 +27,16 @@ const Tile = styled.div`
     svg {
       color: white;
     }
+  }
+
+  p {
+    margin: 0
+  }
+
+  @media screen and (max-width: ${mobile_width}) {
+    flex-basis: 100%;
+    margin: 5px 0;
+    padding: 15px;
   }
 `
 
