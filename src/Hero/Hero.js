@@ -9,6 +9,7 @@ const HeroArea = styled.div`
   display: flex;
   align-items:center;
   height: 680px;
+  max-height: 100vh;
   background: repeating-linear-gradient(
     45deg,
     rgba(0, 0, 0, 0.3),

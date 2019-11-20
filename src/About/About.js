@@ -12,7 +12,7 @@ const {
 
 const AboutContainer = styled.div`
   display: flex;
-  margin-top: -50px;
+  transform: translateY(-50px);
   background-color: ${dark_grey};
   width: 100%;
   padding: 20px;
@@ -24,7 +24,7 @@ class Hero extends Component {
       <ContentBlock color="white" background={light_grey}>
         <ContentArea>
           <Grid>
-            <AboutContainer>
+            <AboutContainer id="about">
               <AboutContent />
             </AboutContainer>
           </Grid>
