@@ -71,11 +71,23 @@ const ContactBlock = styled.div`
   }
 `
 
+const Mask = styled.div`
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: ${props => props.open ? 'block' : 'none' };
+  z-index: 1;
+`
+
 export default {
   Fixed,
   ContentBlock,
   CustomContentBlock,
   ContentArea,
   Grid,
-  ContactBlock
+  ContactBlock,
+  Mask
 }

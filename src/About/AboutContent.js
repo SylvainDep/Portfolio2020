@@ -6,6 +6,7 @@ import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const {
+  constants: { mobile_width },
   uiblocks: { Grid },
   elements: { Badge, SocialLinks }
 } = styles;
@@ -15,6 +16,15 @@ const AboutContentContainer = styled.div`
 
   h2 {
     margin-top: 0
+
+    @media screen and (max-width: ${mobile_width}) {
+      text-align: center;
+
+      &:after {
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
   }
 `
 
@@ -25,6 +35,10 @@ const ProfilePicture = styled.div`
 
   img {
     width: 100%;
+    max-width: 200px;
+    margin: auto;
+    display: block;
+    margin-bottom: 30px;
   }
 `
 const ProfileContent = styled.div`

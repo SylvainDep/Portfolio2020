@@ -5,6 +5,7 @@ import SmoothScrolling from "../../UI/shared/SmoothScrolling";
 import { styles } from '../../UI'
 
 const {
+  uiblocks: { Mask },
   constants: { dark_grey, orange, mobile_width }
 } = styles;
 
@@ -14,6 +15,7 @@ const MenuBlock = styled.ul`
   display: flex;
   font-size: .9em;
   text-transform: uppercase;
+  z-index: 1000;
 
   @media screen and (max-width: ${mobile_width}) {
     flex-direction: column;
@@ -77,9 +79,18 @@ const MenuIcon = styled.div`
   width: 45px;
   position: relative;
   cursor: pointer;
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  z-index: 1000;
+
+  @media screen and (min-width: ${mobile_width}) {
+    display: none;
+  }
 `
 
-const MenuBurger = styled.div`
+const MenuDrawer = styled.div`
   height: 3px;
   width: 25px;
   background-color: white;
@@ -122,11 +133,13 @@ class Menu extends Component {
 
   scrollHandler = (anchor) => {
     SmoothScrolling.scrollTo(anchor);
+    this.toggleMobileMenu();
   }
 
   render() {
     return (
       <>
+      <Mask open={this.state.isMobileMenuOpen} />
         <MenuBlock open={this.state.isMobileMenuOpen}>
           <MenuItem>
             <a onClick={() => this.scrollHandler("services")}>Services</a>
@@ -145,7 +158,7 @@ class Menu extends Component {
           </MenuItem>
         </MenuBlock>
         <MenuIcon onClick={() => this.toggleMobileMenu()}>
-          <MenuBurger />
+          <MenuDrawer />
         </MenuIcon>
       </>
     )
