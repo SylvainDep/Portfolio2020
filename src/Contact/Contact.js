@@ -81,7 +81,7 @@ class Contact extends Component {
                 <img src={require('../assets/img/jimdo_bw.png')} alt="Jimdo" />
               </Partner>
               <Partner href="https://sendesignal.de/" target="_blank">
-                <img src={require('../assets/img/sendesignal.png')} alt="Sendesignal" />
+                <img src={require('../assets/img/sendesignal-bw.png')} alt="Sendesignal" />
               </Partner>
             </Grid>
           </ContentArea>

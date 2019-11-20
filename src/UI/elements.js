@@ -34,6 +34,12 @@ const Badge = styled.div`
   align-items: center;
   justify-content: center;
   position: relative;
+  transition-duration: 0.3s;
+
+  &:hover {
+    background-color: ${orange};
+    color: white;
+  }
 `
 
 const SocialLinks = styled.div`

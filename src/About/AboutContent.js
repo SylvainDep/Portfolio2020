@@ -33,6 +33,10 @@ const ProfilePicture = styled.div`
   margin-top: 5px;
   margin-right: 20px;
 
+  @media screen and (max-width: ${mobile_width}) {
+    margin-right: 0;
+  }
+
   img {
     width: 100%;
     max-width: 200px;

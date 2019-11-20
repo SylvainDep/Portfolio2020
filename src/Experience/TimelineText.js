@@ -56,6 +56,11 @@ const TimelineDetails = styled.div`
     margin-right: 5px;
     color: ${orange}
   }
+
+  @media screen and (max-width: ${mobile_width}) {
+    display: block;
+    margin-top: 5px;
+  }
 `
 
 const TimelineText = (props) => {
