@@ -53,8 +53,9 @@ const TimelineDetails = styled.div`
   }
 
   svg {
-    margin-right: 5px;
-    color: ${orange}
+    margin-right: 2px;
+    color: ${orange};
+    width: 14px!important;
   }
 
   @media screen and (max-width: ${mobile_width}) {

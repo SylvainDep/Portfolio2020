@@ -114,7 +114,7 @@ const ContactData = (props) => {
         </div>
         <div>
           <h3>Address</h3>
-          <p>Langenfelder Damm 70, 22525 Hamburg</p>
+          <p>Langenfelder Damm 70, 22525&nbsp;Hamburg</p>
         </div>
       </ContactDataItem>
       <ContactNotes>I can read and answer to your messages in French, English and German</ContactNotes>

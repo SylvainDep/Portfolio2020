@@ -21,7 +21,7 @@ const TimelineContainer = styled.div`
     content: '';
     position: absolute;
     display: block;
-    height: 105%;
+    height: calc(100% + 80px);
     width: 5px;
     background-color: ${orange};
     left: 50%;
@@ -113,7 +113,7 @@ class Timeline extends Component {
       country: 'France',
       tasks: [
         'Sandwich course training, completed along at the SNCF',
-        'Managing offers/products/resources with focus on clientele needs analysis',
+        'Managing offers/products and resources with focus on clientele needs analysis',
         'Lead Project: Modernizing and optimizing a key parisian station (Paris Austerlitz) signage, using new technologies'
       ]
     },

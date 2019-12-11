@@ -29,7 +29,7 @@ const SkillList = props => {
       <SkillItem title="Git" level={67} />
       <SkillItem title="Jimdo" level={100} />
       <SkillItem title="Wordpress" level={58} />
-      <SkillItem title="Adobe Developper Suite" level={64} />
+      <SkillItem title="Photoshop/Illustrator" level={64} />
     </SkillsContainer>
   )
 }

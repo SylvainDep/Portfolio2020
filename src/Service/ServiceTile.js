@@ -15,6 +15,7 @@ const Tile = styled.div`
   text-align: center;
   background-color: white;
   transition-duration: 0.2s;
+  max-width: 400px;
 
   &:hover {
     background-color: ${orange};
@@ -35,7 +36,7 @@ const Tile = styled.div`
 
   @media screen and (max-width: ${mobile_width}) {
     flex-basis: 100%;
-    margin: 5px 0;
+    margin: 5px auto;
     padding: 15px;
   }
 `

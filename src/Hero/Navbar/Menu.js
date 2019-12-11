@@ -16,6 +16,7 @@ const MenuBlock = styled.ul`
   font-size: .9em;
   text-transform: uppercase;
   z-index: 1000;
+  margin: 0;
 
   @media screen and (max-width: ${mobile_width}) {
     flex-direction: column;
@@ -40,6 +41,7 @@ const MenuItem = styled.li`
   position: relative;
   transition-duration: 0.3s;
   cursor: pointer;
+  padding: 20px 10px;
 
   &:after {
     content: '';
