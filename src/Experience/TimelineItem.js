@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 
 import TimelineText from './TimelineText'
-import TimelineDate from './TimelineDate'
+import TimelineAnchor from './TimelineAnchor'
 
 import { styles } from '../UI'
 
@@ -17,7 +17,7 @@ const TimelineItemContainer = styled.div`
   &:nth-child(even) {
     flex-direction: row-reverse;
 
-    & div:before {
+    & .experience_content:before {
       border: 15px solid transparent;
       border-right-color: #ccc;
       left: -31px;
@@ -26,7 +26,7 @@ const TimelineItemContainer = styled.div`
       position: absolute;
     }
 
-    & div:after {
+    & .experience_content:after {
       border: 15px solid transparent;
       border-right-color: #fff;
       left: -30px;
@@ -38,7 +38,7 @@ const TimelineItemContainer = styled.div`
 
   &:nth-child(odd) {
 
-    & div:before {
+    & .experience_content:before {
       border: 15px solid transparent;
       border-left-color: #ccc;
       right: -31px;
@@ -47,7 +47,7 @@ const TimelineItemContainer = styled.div`
       position: absolute;
     }
 
-    & div:after {
+    & .experience_content:after {
       border: 15px solid transparent;
       border-left-color: #fff;
       right: -30px;
@@ -59,7 +59,7 @@ const TimelineItemContainer = styled.div`
     @media screen and (max-width: ${mobile_width}) {
       flex-direction: row-reverse;
 
-      & div:before {
+      & .experience_content:before {
         width: 0;
         border: 15px solid transparent;
         border-right-color: #ccc;
@@ -69,7 +69,7 @@ const TimelineItemContainer = styled.div`
         position: absolute;
       }
 
-      & div:after {
+      & .experience_content:after {
         width: 0;
         border: 15px solid transparent;
         border-right-color: #fff;
@@ -90,7 +90,7 @@ const TimelineItem = (props) => {
   return (
     <TimelineItemContainer>
       <TimelineText data={props.data}/>
-      <TimelineDate data={props.data}/>
+      <TimelineAnchor data={props.data}/>
     </TimelineItemContainer>
   )
 }

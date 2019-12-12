@@ -23,10 +23,11 @@ const TimelineTextBlock = styled.div`
     display: flex;
     align-items: center;
     margin-bottom: 10px;
+    color: #666;
 
     img {
       max-height: 100%;
-      margin-left: 10px;
+      max-width: 100%;
     }
   }
 
@@ -36,7 +37,7 @@ const TimelineTextBlock = styled.div`
 
   ul {
     padding-left: 18px;
-    margin-bottom: 0;
+    margin: 0;
 
     li {
       margin-bottom: 5px;
@@ -73,10 +74,18 @@ const TimelineDetails = styled.div`
   }
 `
 
+const Position = styled.p`
+  margin: .5em 0;
+  font-weight: 700;
+  color: #353535;
+  font-size: 1.3em;
+  line-height: 1.3em;
+`
+
 const TimelineText = (props) => {
   return (
-    <TimelineTextBlock>
-      <h3>{props.data.title}<img src={props.data.logo} /></h3>
+    <TimelineTextBlock className="experience_content">
+      <h3><img src={props.data.logo} /></h3>
       <TimelineDetails>
         <div className="location">
           <FontAwesomeIcon icon={faHome} color="white" size="xs" />
@@ -87,6 +96,7 @@ const TimelineText = (props) => {
           <i>{props.data.startDate} - {props.data.endDate}</i>
         </div>
       </TimelineDetails>
+      <Position>{props.data.position}</Position>
       <ul>
         <li>{props.data.tasks[0]}</li>
         <li>{props.data.tasks[1]}</li>

@@ -60,24 +60,28 @@ class Timeline extends Component {
   state = {
     sendesignal: {
       title: 'Sendesignal',
+      position: 'FrontEnd Developer',
       logo: Sendesignal,
       startDate: 'Aug 2019',
       endDate: 'Today',
       dateTag: '2019',
+      type: 'job',
       city: 'Hamburg',
       country: 'Germany',
       tasks: [
         'Development of banking product Finders with vanilla JS',
         'Implementation of new features/optimization in existing Finders',
-        'Developped the use of the modern adequate tech with React'
+        'Developped the use of the modern adequate techs with React'
       ]
     },
     jimdo: {
       title: 'Jimdo',
+      position: 'French market Allrounder',
       logo: Jimdo,
       startDate: 'Nov 2014',
       endDate: 'May 2019',
       dateTag: '2014 - 2019',
+      type: 'job',
       city: 'Hamburg',
       country: 'Germany',
       tasks: [
@@ -88,10 +92,12 @@ class Timeline extends Component {
     },
     openclassroom: {
       title: 'OpenClassroom',
+      position: 'Junior Web Developer',
       logo: OpenClassroom,
       startDate: 'Feb 2018',
       endDate: 'Oct 2018',
       dateTag: '2018',
+      type: 'training',
       city: 'Online',
       country: 'French school',
       tasks: [
@@ -102,10 +108,12 @@ class Timeline extends Component {
     },
     sncf: {
       title: 'SNCF',
+      position: 'Station Manager Assistant',
       logo: SNCF,
       startDate: 'Sep 2011',
       endDate: 'Jul 2013',
       dateTag: '2011 - 2013',
+      type: 'job',
       city: 'Paris 13',
       country: 'France',
       tasks: [
@@ -115,11 +123,13 @@ class Timeline extends Component {
       ]
     },
     ifcv: {
-      title: 'Bachelor in (Online-) Store Management',
+      title: 'IFCV',
+      position: 'Bachelor in (Online-) Store Management',
       logo: IFCV,
       startDate: 'Sep 2011',
       endDate: 'Jul 2013',
       dateTag: '2011 - 2013',
+      type: 'training',
       city: 'Levallois-P.',
       country: 'France',
       tasks: [

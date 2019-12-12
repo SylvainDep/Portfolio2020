@@ -59,7 +59,7 @@ const AboutContent = (props) => {
             <img src={require('../assets/img/profile.jpg')} alt="profile" />
           </ProfilePicture>
           <ProfileContent>
-            <p><b>I’M A WEB DEVELOPPER</b> from France living in Hamburg (Germany), where I work as Frontend Developper at Sendesignal. With a background in SEO, content management and Language Studies, I have developped my skills in Frontend development and loved it ever since.</p>
+            <p><b>I’M A WEB DEVELOPER</b> from France living in Hamburg (Germany), where I work as Frontend Developer at Sendesignal. With a background in SEO, content management and Language Studies, I have developped my skills in Frontend development and loved it ever since.</p>
             <p>I particularly enjoy the feeling of bringing a paper project to life, and making it usable and scalable to see it evolve and meet both owners and final user wishes. This leads me to consider all the aspects of a project in details from the beginning, and to come up with a solution to all of them.</p>
             <SocialLinks>
               <Grid justify="flex-start">

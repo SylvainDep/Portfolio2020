@@ -5,6 +5,7 @@ import { faGoogle } from "@fortawesome/free-brands-svg-icons";
 import { styles } from '../UI'
 
 import SectionHeader from '../UI/shared/SectionHeader'
+import SectionFooter from '../UI/shared/SectionFooter'
 import ServiceTile from './ServiceTile'
 
 const {
@@ -39,6 +40,7 @@ class Service extends Component {
               title="SEO"
               text="The handiest website ain't much if noone actually sees it. Optimize it so everyone sees it on top of search engines' lists"/>
           </Grid>
+          <SectionFooter />
         </ContentArea>
       </ContentBlock>
     )

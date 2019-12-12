@@ -22,6 +22,7 @@ const InputContainer = styled.div`
     transition: all 0.4s ease;
     margin-bottom: 15px;
     font-size: 0.9em;
+    outline: 0;
 
     &:focus, :hover {
       border: 1px solid ${orange};
@@ -40,6 +41,7 @@ const InputContainer = styled.div`
     padding: 10px 30px;
     font-size: 1em;
     border-radius: 5px;
+    cursor: pointer;
 
     svg {
       margin-right: 10px

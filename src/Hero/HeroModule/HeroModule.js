@@ -75,7 +75,7 @@ class HeroModule extends Component {
     return (
       <ContentArea>
         <h1>Hey, my name is Sylvain</h1>
-        <SubTitle>I am webdevelopper</SubTitle>
+        <SubTitle>I am webdeveloper</SubTitle>
         <Grid justify="center">
           <Button primary><FontAwesomeIcon className="contacticon" icon={faRocket}/>Hire Me</Button>
           <Button secondary><FontAwesomeIcon className="contacticon" icon={faBriefcase}/>My Projects</Button>
