@@ -19,6 +19,15 @@ const TimelineTextBlock = styled.div`
 
   h3 {
     margin: 0;
+    height: 2em;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+
+    img {
+      max-height: 100%;
+      margin-left: 10px;
+    }
   }
 
   i {
@@ -67,7 +76,7 @@ const TimelineDetails = styled.div`
 const TimelineText = (props) => {
   return (
     <TimelineTextBlock>
-      <h3>{props.data.title}</h3>
+      <h3>{props.data.title}<img src={props.data.logo} /></h3>
       <TimelineDetails>
         <div className="location">
           <FontAwesomeIcon icon={faHome} color="white" size="xs" />

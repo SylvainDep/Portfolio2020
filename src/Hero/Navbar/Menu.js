@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
 import SmoothScrolling from "../../UI/shared/SmoothScrolling";
-import { faHome } from "@fortawesome/free-solid-svg-icons";
+import { faRocket, faBriefcase, faHistory, faStar, faCode } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import { styles } from '../../UI'
@@ -38,7 +38,6 @@ const MenuBlock = styled.ul`
 `
 
 const MenuItem = styled.li`
-  margin-left: 10px;
   position: relative;
   transition-duration: 0.3s;
   cursor: pointer;
@@ -49,20 +48,62 @@ const MenuItem = styled.li`
     align-items: center;
   }
 
-  @media screen and (max-width: ${mobile_width}) {
-    margin: 20px 0;
-  }
-
   .menuitem-icon {
     margin-right: 5px;
     opacity: 0;
     transition-duration: .3s;
+    transform: translateY(5px);
+  }
+
+  :after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: ${orange};
+    height: 3px;
+    width: 0;
+    border-radius: 0 0 10px 10px;
+    transition-duration: .3s;
+    opacity: 0;
+  }
+
+  :before {
+    position: absolute;
+    top: -4px;
+    left: 50%;
+    right: 50%;
+    content: "";
+    border-bottom: 8px solid transparent;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-top: 8px solid ${orange};
+    margin-left: -4px;
+    transition: all 0.3s ease;
+    opacity: 0;
   }
 
   :hover {
     .menuitem-icon {
       opacity: 1;
+      transform: translateY(0);
     }
+
+    :after {
+      opacity: 1;
+      width: 100%;
+    }
+
+    :before {
+      opacity: 1;
+      top: 0;
+    }
+  }
+
+  @media screen and (max-width: ${mobile_width}) {
+    margin: 20px 0;
   }
 `
 
@@ -137,31 +178,31 @@ class Menu extends Component {
         <MenuBlock open={this.state.isMobileMenuOpen}>
           <MenuItem>
             <a onClick={() => this.scrollHandler("services")}>
-              <FontAwesomeIcon className="menuitem-icon" icon={faHome} size="sm"/>
+              <FontAwesomeIcon className="menuitem-icon" icon={faRocket} size="sm"/>
               Services
             </a>
           </MenuItem>
           <MenuItem>
             <a onClick={() => this.scrollHandler("projects")}>
-              <FontAwesomeIcon className="menuitem-icon" icon={faHome} size="sm"/>
+              <FontAwesomeIcon className="menuitem-icon" icon={faBriefcase} size="sm"/>
               Projects
             </a>
           </MenuItem>
           <MenuItem>
             <a onClick={() => this.scrollHandler("skills")}>
-              <FontAwesomeIcon className="menuitem-icon" icon={faHome} size="sm"/>
+              <FontAwesomeIcon className="menuitem-icon" icon={faCode} size="sm"/>
               Skills
             </a>
           </MenuItem>
           <MenuItem>
             <a onClick={() => this.scrollHandler("experience")}>
-              <FontAwesomeIcon className="menuitem-icon" icon={faHome} size="sm"/>
+              <FontAwesomeIcon className="menuitem-icon" icon={faHistory} size="sm"/>
               Experience
             </a>
           </MenuItem>
           <MenuItem>
             <a onClick={() => this.scrollHandler("contact")}>
-              <FontAwesomeIcon className="menuitem-icon" icon={faHome} size="sm"/>
+              <FontAwesomeIcon className="menuitem-icon" icon={faStar} size="sm"/>
               Contact
             </a>
           </MenuItem>

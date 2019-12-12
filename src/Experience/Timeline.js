@@ -5,6 +5,12 @@ import { styles } from '../UI'
 
 import TimelineItem from './TimelineItem'
 
+import Sendesignal from '../assets/img/sendesignal.png'
+import Jimdo from '../assets/img/jimdo_logo.png'
+import OpenClassroom from '../assets/img/openclassrooms_logo.png'
+import SNCF from '../assets/img/sncf_logo.png'
+import IFCV from '../assets/img/ifcv_logo.png'
+
 const {
   elements: { Button },
   constants: { orange, mobile_width }
@@ -54,6 +60,7 @@ class Timeline extends Component {
   state = {
     sendesignal: {
       title: 'Sendesignal',
+      logo: Sendesignal,
       startDate: 'Aug 2019',
       endDate: 'Today',
       dateTag: '2019',
@@ -67,6 +74,7 @@ class Timeline extends Component {
     },
     jimdo: {
       title: 'Jimdo',
+      logo: Jimdo,
       startDate: 'Nov 2014',
       endDate: 'May 2019',
       dateTag: '2014 - 2019',
@@ -80,6 +88,7 @@ class Timeline extends Component {
     },
     openclassroom: {
       title: 'OpenClassroom',
+      logo: OpenClassroom,
       startDate: 'Feb 2018',
       endDate: 'Oct 2018',
       dateTag: '2018',
@@ -93,6 +102,7 @@ class Timeline extends Component {
     },
     sncf: {
       title: 'SNCF',
+      logo: SNCF,
       startDate: 'Sep 2011',
       endDate: 'Jul 2013',
       dateTag: '2011 - 2013',
@@ -106,6 +116,7 @@ class Timeline extends Component {
     },
     ifcv: {
       title: 'Bachelor in (Online-) Store Management',
+      logo: IFCV,
       startDate: 'Sep 2011',
       endDate: 'Jul 2013',
       dateTag: '2011 - 2013',
