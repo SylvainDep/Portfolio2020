@@ -80,6 +80,10 @@ const Mask = styled.div`
   background-color: rgba(0, 0, 0, 0.5);
   display: ${props => props.open ? 'block' : 'none' };
   z-index: 1;
+
+  @media screen and (min-width: ${mobile_width}) {
+    display: none;
+  }
 `
 
 export default {

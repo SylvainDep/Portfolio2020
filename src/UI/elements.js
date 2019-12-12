@@ -16,11 +16,17 @@ const Button = styled.a`
 
   svg {
     margin-right: 10px;
+    transition: transform 0.3s;
   }
 
   &:hover {
     background-color: ${orange};
     color: white;
+
+    svg {
+      transform: scale(1.3);
+      transition-timing-function: cubic-bezier(0.47, 2.02, 0.31, -0.36);
+    }
   }
 `
 

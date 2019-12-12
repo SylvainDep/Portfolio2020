@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
 import SmoothScrolling from "../../UI/shared/SmoothScrolling";
+import { faHome } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import { styles } from '../../UI'
 
@@ -37,38 +39,30 @@ const MenuBlock = styled.ul`
 
 const MenuItem = styled.li`
   margin-left: 10px;
-  padding: 2px 5px;
   position: relative;
   transition-duration: 0.3s;
   cursor: pointer;
   padding: 20px 10px;
 
-  &:after {
-    content: '';
-    display: block;
-    position: absolute;
-    opacity: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    height: 5px;
-    width: 5px;
-    background-color: ${orange};
-    margin: 2px auto 0 auto;
-    border-radius: 50%;
-    transition-duration: 0.3s;
-  }
-
-  &:hover {
-    color: ${orange};
-  }
-
-  &:hover:after {
-    opacity: 1;
-    box-shadow: 10px 0 ${orange}, -10px 0 ${orange};
+  a {
+    display: flex;
+    align-items: center;
   }
 
   @media screen and (max-width: ${mobile_width}) {
     margin: 20px 0;
+  }
+
+  .menuitem-icon {
+    margin-right: 5px;
+    opacity: 0;
+    transition-duration: .3s;
+  }
+
+  :hover {
+    .menuitem-icon {
+      opacity: 1;
+    }
   }
 `
 
@@ -129,8 +123,6 @@ class Menu extends Component {
     this.setState(prevState => {
       return {isMobileMenuOpen: !prevState.isMobileMenuOpen}
     })
-
-    console.log(this.state.isMobileMenuOpen)
   }
 
   scrollHandler = (anchor) => {
@@ -144,19 +136,34 @@ class Menu extends Component {
       <Mask open={this.state.isMobileMenuOpen} />
         <MenuBlock open={this.state.isMobileMenuOpen}>
           <MenuItem>
-            <a onClick={() => this.scrollHandler("services")}>Services</a>
+            <a onClick={() => this.scrollHandler("services")}>
+              <FontAwesomeIcon className="menuitem-icon" icon={faHome} size="sm"/>
+              Services
+            </a>
           </MenuItem>
           <MenuItem>
-            <a onClick={() => this.scrollHandler("projects")}>Projects</a>
+            <a onClick={() => this.scrollHandler("projects")}>
+              <FontAwesomeIcon className="menuitem-icon" icon={faHome} size="sm"/>
+              Projects
+            </a>
           </MenuItem>
           <MenuItem>
-            <a onClick={() => this.scrollHandler("skills")}>Skills</a>
+            <a onClick={() => this.scrollHandler("skills")}>
+              <FontAwesomeIcon className="menuitem-icon" icon={faHome} size="sm"/>
+              Skills
+            </a>
           </MenuItem>
           <MenuItem>
-            <a onClick={() => this.scrollHandler("experience")}>Experience</a>
+            <a onClick={() => this.scrollHandler("experience")}>
+              <FontAwesomeIcon className="menuitem-icon" icon={faHome} size="sm"/>
+              Experience
+            </a>
           </MenuItem>
           <MenuItem>
-            <a onClick={() => this.scrollHandler("contact")}>Contact</a>
+            <a onClick={() => this.scrollHandler("contact")}>
+              <FontAwesomeIcon className="menuitem-icon" icon={faHome} size="sm"/>
+              Contact
+            </a>
           </MenuItem>
         </MenuBlock>
         <MenuIcon onClick={() => this.toggleMobileMenu()}>
