@@ -29,6 +29,10 @@ const InputContainer = styled.div`
     }
   }
 
+  button {
+    outline: 0;
+  }
+
   textarea {
     resize: none;
   }
@@ -127,7 +131,7 @@ class Form extends Component {
           <textarea
             onChange={(event) => this.inputChangedHandler(event, 'message')}
             rows="6"
-            placeholder="Type Your Message Here"></textarea>
+            placeholder="Your Message"></textarea>
           <button onClick={(event) => this.submitForm(event)}><FontAwesomeIcon icon={faPaperPlane} color="white" />Submit</button>
         </InputContainer>
       </ContactBlock>

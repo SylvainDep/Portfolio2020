@@ -5,6 +5,8 @@ import SmoothScrolling from "../../UI/shared/SmoothScrolling";
 import { faEnvelope, faFile } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
+import Resume from "../../assets/misc/test.pdf";
+
 import { styles } from '../../UI'
 
 const {
@@ -15,6 +17,10 @@ const {
 
 const SectionFooterContainer = styled.div`
   margin-top: 30px;
+
+  a {
+    text-decoration: none;
+  }
 `
 
 const SectionFooter = props => {
@@ -25,8 +31,14 @@ const SectionFooter = props => {
   return (
     <SectionFooterContainer>
       <Grid justify="center">
-        <Button onClick={() => scrollHandler("contact")} primary><FontAwesomeIcon className="contacticon" icon={faEnvelope}/>Contact</Button>
-        <Button href='../../assets/misc/test.pdf' download><FontAwesomeIcon className="contacticon" icon={faFile}/>Download CV</Button>
+        <Button onClick={() => scrollHandler("contact")} primary>
+          <FontAwesomeIcon className="contacticon" icon={faEnvelope}/>
+          Contact
+        </Button>
+        <Button href={Resume} download="test.pdf">
+          <FontAwesomeIcon className="contacticon" icon={faFile}/>
+          Download CV
+        </Button>
       </Grid>
     </SectionFooterContainer>
   )

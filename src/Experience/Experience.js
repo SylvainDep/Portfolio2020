@@ -4,6 +4,7 @@ import { faHistory } from "@fortawesome/free-solid-svg-icons";
 import { styles } from '../UI'
 
 import SectionHeader from '../UI/shared/SectionHeader'
+import SectionFooter from '../UI/shared/SectionFooter'
 import Timeline from './Timeline'
 
 const {
@@ -21,6 +22,7 @@ class Experience extends Component {
             title="Work & Education"
             text="More than 5 years of experience and expertise in the web industry to help you reach your goals." />
           <Timeline />
+          <SectionFooter />
         </ContentArea>
       </ContentBlock>
     )

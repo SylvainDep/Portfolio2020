@@ -25,7 +25,7 @@ const ContactDataItem = styled.div`
       position: absolute;
       left: 20px;
       transform: translateX(-50%);
-      top: -30px;
+      top: -35px;
       background-color: ${orange};
       color: white;
       text-align: center;
@@ -34,11 +34,13 @@ const ContactDataItem = styled.div`
       border-radius: 2px;
       opacity: 0;
       transition-duration: 0.3s;
+      z-index: 10000;
     }
 
     &:hover {
       &:before {
         opacity: 1;
+        top: -30px;
       }
     }
   }

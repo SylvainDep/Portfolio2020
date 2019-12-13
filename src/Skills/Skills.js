@@ -5,6 +5,7 @@ import { faGoogle } from "@fortawesome/free-brands-svg-icons";
 import { styles } from '../UI'
 
 import SectionHeader from '../UI/shared/SectionHeader'
+import SectionFooter from '../UI/shared/SectionFooter'
 import SkillList from './SkillList'
 
 const {
@@ -23,6 +24,7 @@ class Skills extends Component {
             text="All this package is delivered with its pretty ribbon of good practices: Responsive Design, Object-oriented programming, SEO-oriented and other considerations are always kept in mind in my projects." />
           <SkillList />
         </ContentArea>
+        <SectionFooter />
       </CustomContentBlock>
     )
   }
