@@ -3,6 +3,7 @@ export const dark_grey = '#353535';
 export const orange = '#F2784B';
 
 export const mobile_width = '767px';
+export const mobile_width_strict = '480px';
 
 export default {
   light_grey,

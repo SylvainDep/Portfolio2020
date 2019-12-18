@@ -1,11 +1,13 @@
 import React from 'react'
 import styled from 'styled-components'
 
+import { faLink } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import { styles } from '../UI'
 
 const {
-  constants: { orange, mobile_width }
+  constants: { orange, mobile_width, mobile_width_strict }
 } = styles;
 
 const GalleryItem = styled.div`
@@ -19,6 +21,11 @@ const GalleryItem = styled.div`
   @media screen and (max-width: ${mobile_width}) {
     flex-basis: 50%;
     padding-bottom: 50%;
+  }
+
+  @media screen and (max-width: ${mobile_width_strict}) {
+    flex-basis: 100%;
+    padding-bottom: 100%;
   }
 `
 
@@ -142,6 +149,17 @@ const GalleryItemContent = styled.div`
   }
 `
 
+const GalleryIcon = styled.a`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  color: ${orange};
+  height: 25px;
+  width: 25px;
+  border-radius: 100%;
+`
+
 const GalleryTile = props => {
   return (
     <GalleryItem bgImg={props.img}>
@@ -149,6 +167,9 @@ const GalleryTile = props => {
         <GalleryItemFrame>
           <h3>{props.company}</h3>
           <p>{props.skills}</p>
+          <GalleryIcon>
+            {props.address && <FontAwesomeIcon icon={faLink}/>}
+          </GalleryIcon>
         </GalleryItemFrame>
       </GalleryItemContent>
     </GalleryItem>
