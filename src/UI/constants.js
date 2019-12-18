@@ -9,5 +9,6 @@ export default {
   light_grey,
   dark_grey,
   orange,
-  mobile_width
+  mobile_width,
+  mobile_width_strict
 }

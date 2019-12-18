@@ -10,7 +10,10 @@ const {
   constants: { orange, mobile_width, mobile_width_strict }
 } = styles;
 
-const GalleryItem = styled.div`
+const GalleryItem = styled.a.attrs(props => ({
+  target: "_blank",
+}))`
+  display: block;
   flex-basis: 25%;
   height: 0;
   padding-bottom: 25%;
@@ -21,11 +24,6 @@ const GalleryItem = styled.div`
   @media screen and (max-width: ${mobile_width}) {
     flex-basis: 50%;
     padding-bottom: 50%;
-  }
-
-  @media screen and (max-width: ${mobile_width_strict}) {
-    flex-basis: 100%;
-    padding-bottom: 100%;
   }
 `
 
@@ -149,7 +147,9 @@ const GalleryItemContent = styled.div`
   }
 `
 
-const GalleryIcon = styled.a`
+const GalleryIcon = styled.a.attrs(props => ({
+  target: "_blank",
+}))`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -158,16 +158,17 @@ const GalleryIcon = styled.a`
   height: 25px;
   width: 25px;
   border-radius: 100%;
+  box-shadow: 0px 0px 4px 1px lightgrey;
 `
 
 const GalleryTile = props => {
   return (
-    <GalleryItem bgImg={props.img}>
+    <GalleryItem bgImg={props.img} href={props.address} target="_blank">
       <GalleryItemContent>
         <GalleryItemFrame>
           <h3>{props.company}</h3>
           <p>{props.skills}</p>
-          <GalleryIcon>
+          <GalleryIcon href={props.address}>
             {props.address && <FontAwesomeIcon icon={faLink}/>}
           </GalleryIcon>
         </GalleryItemFrame>
