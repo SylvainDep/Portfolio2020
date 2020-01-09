@@ -14,16 +14,18 @@ const GalleryItem = styled.a.attrs(props => ({
   target: "_blank",
 }))`
   display: block;
-  flex-basis: 25%;
+  flex-basis: 23%;
+  margin: 1%;
   height: 0;
-  padding-bottom: 25%;
+  padding-bottom: 23%;
   background: url(${props => props.bgImg}) no-repeat center center;
   background-size: 100%;
   position: relative;
+  box-shadow: 0px 0px 20px -5px rgba(0,0,0,0.5);
 
   @media screen and (max-width: ${mobile_width}) {
-    flex-basis: 50%;
-    padding-bottom: 50%;
+    flex-basis: 48%;
+    padding-bottom: 48%;
   }
 `
 

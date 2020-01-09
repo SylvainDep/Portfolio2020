@@ -52,7 +52,6 @@ const Grid = styled.div`
   height: 100%;
   width: 100%;
 
-
   @media screen and (max-width: ${mobile_width}) {
     ${props => props.responsive ? 'display: block' : ''}
   }
