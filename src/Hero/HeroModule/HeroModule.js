@@ -77,8 +77,8 @@ class HeroModule extends Component {
         <h1>Hey, my name is Sylvain</h1>
         <SubTitle>I am webdeveloper</SubTitle>
         <Grid justify="center">
-          <Button primary><FontAwesomeIcon className="contacticon" icon={faRocket}/>Hire Me</Button>
-          <Button secondary><FontAwesomeIcon className="contacticon" icon={faBriefcase}/>My Projects</Button>
+          <Button onClick={() => this.scrollHandler("contact")} primary><FontAwesomeIcon className="contacticon" icon={faRocket}/>Hire Me</Button>
+          <Button onClick={() => this.scrollHandler("projects")} secondary><FontAwesomeIcon className="contacticon" icon={faBriefcase}/>My Projects</Button>
         </Grid>
         <ButtonDown onClick={() => this.scrollHandler("about_anchor")}>
           <FontAwesomeIcon className="hero_chevron first" icon={faChevronDown}/>

@@ -65,6 +65,7 @@ const GalleryItemFrame = styled.div`
   }
 
   h3, p {
+    margin: 0;
     max-width: calc(100% - 60px)
   }
 `
@@ -152,6 +153,7 @@ const GalleryItemContent = styled.div`
 const GalleryIcon = styled.a.attrs(props => ({
   target: "_blank",
 }))`
+  margin-top: 5px;
   display: flex;
   justify-content: center;
   align-items: center;

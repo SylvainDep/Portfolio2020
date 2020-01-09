@@ -24,7 +24,7 @@ const PortfolioGallery = props => {
       <GalleryTile
         img={require('../assets/img/sendesignal.png')}
         company="Jimdo"
-        skills="HTML/CSS, JS, React"
+        skills="HTML/CSS, JS, JQuery"
         address="https://sendesignal.de/" />
       <GalleryTile
         img={require('../assets/img/seaeye.png')}
@@ -36,6 +36,11 @@ const PortfolioGallery = props => {
         company="Nussknacker"
         skills="Wordpress, custom template"
         address="http://vorschau.sendesignal-hosting.de/vitalaltona/wir-gehoeren-zu-hamburg/" />
+      <GalleryTile
+        img={require('../assets/img/volksbank.png')}
+        company="Volksbank"
+        skills="React, Javascript"
+        address="http://onlinefinder.info/vvb/partnermodell/#/overview" />
     </Grid>
   )
 }

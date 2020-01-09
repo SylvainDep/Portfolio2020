@@ -5,7 +5,7 @@ import SmoothScrolling from "../../UI/shared/SmoothScrolling";
 import { faEnvelope, faFile } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-import Resume from "../../assets/misc/test.pdf";
+import Resume from "../../assets/misc/Resume - Sylvain Depardieu.pdf";
 
 import { styles } from '../../UI'
 
@@ -35,7 +35,7 @@ const SectionFooter = props => {
           <FontAwesomeIcon className="contacticon" icon={faEnvelope}/>
           Contact
         </Button>
-        <Button href={Resume} download="test.pdf">
+        <Button href={Resume} download="Resume - Sylvain Depardieu.pdf">
           <FontAwesomeIcon className="contacticon" icon={faFile}/>
           Download CV
         </Button>
