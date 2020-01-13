@@ -18,6 +18,8 @@ const ContactDataItem = styled.div`
   .contacticonholder {
     display: block;
     position: relative;
+    width: 40px;
+    margin-right: 20px;
 
     &:before {
       content: '${props => props.clipboardtext}';

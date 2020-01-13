@@ -23,7 +23,7 @@ const PortfolioGallery = props => {
         address="https://help.jimdo.com/hc/en-us" />
       <GalleryTile
         img={require('../assets/img/sendesignal.png')}
-        company="Jimdo"
+        company="Sendesignal"
         skills="HTML/CSS, JS, JQuery"
         address="https://sendesignal.de/" />
       <GalleryTile

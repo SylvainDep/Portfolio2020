@@ -7,7 +7,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { styles } from '../UI'
 
 const {
-  constants: { orange, mobile_width, mobile_width_strict }
+  constants: { orange, mobile_width, mobile_width_strict, desktop_width }
 } = styles;
 
 const GalleryItem = styled.a.attrs(props => ({
@@ -21,11 +21,21 @@ const GalleryItem = styled.a.attrs(props => ({
   background: url(${props => props.bgImg}) no-repeat center center;
   background-size: 100%;
   position: relative;
-  box-shadow: 0px 0px 20px -5px rgba(0,0,0,0.5);
+  box-shadow: 0px 0px 15px -5px rgba(0,0,0,0.5);
+
+  @media screen and (max-width: ${desktop_width}) {
+    flex-basis: calc((100% / 3) - 2%);
+    padding-bottom: 31%;
+  }
 
   @media screen and (max-width: ${mobile_width}) {
     flex-basis: 48%;
     padding-bottom: 48%;
+  }
+
+  @media screen and (max-width: ${mobile_width_strict}) {
+    flex-basis: 98%;
+    padding-bottom: 98%;
   }
 `
 
@@ -153,7 +163,7 @@ const GalleryItemContent = styled.div`
 const GalleryIcon = styled.a.attrs(props => ({
   target: "_blank",
 }))`
-  margin-top: 5px;
+  margin-top: 15px;
   display: flex;
   justify-content: center;
   align-items: center;
