@@ -74,8 +74,8 @@ class HeroModule extends Component {
   render() {
     return (
       <ContentArea>
-        <h1>Hey, my name is Sylvain</h1>
-        <SubTitle>I am webdeveloper</SubTitle>
+        <h1>Hey, my name is Sylvain,</h1>
+        <SubTitle>I am a creative webdeveloper</SubTitle>
         <Grid justify="center">
           <Button onClick={() => this.scrollHandler("contact")} primary><FontAwesomeIcon className="contacticon" icon={faRocket}/>Hire Me</Button>
           <Button onClick={() => this.scrollHandler("projects")} secondary><FontAwesomeIcon className="contacticon" icon={faBriefcase}/>My Projects</Button>
