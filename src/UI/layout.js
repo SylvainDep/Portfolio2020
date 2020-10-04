@@ -85,6 +85,17 @@ const Mask = styled.div`
   }
 `
 
+const AnimWrapper = styled.div`
+  width: auto;
+  flex-basis: 23%;
+
+  @media screen and (max-width: ${mobile_width}) {
+    flex-basis: 100%;
+    margin: 5px auto;
+    padding: 15px;
+  }
+`
+
 export default {
   Fixed,
   ContentBlock,
@@ -92,5 +103,6 @@ export default {
   ContentArea,
   Grid,
   ContactBlock,
-  Mask
+  Mask,
+  AnimWrapper
 }

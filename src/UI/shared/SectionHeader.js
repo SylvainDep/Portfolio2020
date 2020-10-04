@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { useInView } from 'react-intersection-observer';
 
 import { styles } from '../../UI'
 
@@ -14,15 +15,35 @@ const SectionHeaderContainer = styled.div`
   margin: auto;
   margin-bottom: 50px;
 
+  .fromLeft, .fromRight {
+    transition: transform .5s ease, opacity .5s ease;
+  }
+
+  .fromLeft {
+    transform: translateX(-80px);
+    opacity: 0;
+
+    &.visible {
+      transform: translateX(0px);
+      opacity: 1;
+    }
+  }
+
+  .fromRight {
+    transform: translateX(80px);
+    opacity: 0;
+
+    &.visible {
+      transform: translateX(0px);
+      opacity: 1;
+    }
+  }
+
   & h2 {
     text-transform: uppercase;
     font-size: 1.8em;
     margin-bottom: 0;
     padding-bottom: 0
-  }
-
-  & h2:after {
-    display: none;
   }
 `
 
@@ -61,13 +82,25 @@ const Separator = styled.div`
 `
 
 const SectionHeader = props => {
+  const { ref, inView, entry } = useInView({
+    threshold: .5,
+    triggerOnce: true
+  });
+
+  let isVisible = inView ? 'visible' : 'hidden'
+  const transitionDelay = props.index/5
+
   return (
-    <SectionHeaderContainer>
-     <h2>{props.title}</h2>
-     <Separator>
-       <FontAwesomeIcon icon={props.icon} color="white" size="xs" />
-     </Separator>
-     <p>{props.text}</p>
+    <SectionHeaderContainer ref={ref}>
+      <div className={"fromLeft "+isVisible}>
+        <h2>{props.title}</h2>
+        <Separator>
+          <FontAwesomeIcon icon={props.icon} color="white" size="xs" />
+        </Separator>
+      </div>
+      <div className={"fromRight "+isVisible}>
+        <p>{props.text}</p>
+      </div>
     </SectionHeaderContainer>
   )
 }
