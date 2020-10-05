@@ -133,25 +133,32 @@ const MenuDrawer = styled.div`
   background-color: white;
   position: relative;
   cursor: pointer;
+  visibility: ${props => props.open ? "hidden" : "visible"}
 
   &:before {
+    transition-duration: .3s;
     position: absolute;
-    top: -8px;
+    top: ${props => props.open ? "0" : "-8px"};
     display: block;
     content: '';
     height: 3px;
     width: 25px;
     background-color: white;
+    visibility: visible;
+    transform: rotate(${props => props.open ? "45deg" : "0deg"})
   }
 
   &:after {
+    transition-duration: .3s;
     position: absolute;
-    bottom: -8px;
+    bottom: ${props => props.open ? "0" : "-8px"};
     display: block;
     content: '';
     height: 3px;
     width: 25px;
     background-color: white;
+    visibility: visible;
+    transform: rotate(${props => props.open ? "-45deg" : "0deg"})
   }
 `
 
@@ -208,7 +215,7 @@ class Menu extends Component {
           </MenuItem>
         </MenuBlock>
         <MenuIcon onClick={() => this.toggleMobileMenu()}>
-          <MenuDrawer />
+          <MenuDrawer open={this.state.isMobileMenuOpen} />
         </MenuIcon>
       </>
     )

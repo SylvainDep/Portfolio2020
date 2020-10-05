@@ -49,7 +49,6 @@ const Grid = styled.div`
   flex-wrap: wrap;
   justify-content: ${props => props.justify ? props.justify : 'space-between' };
   align-items: ${props => props.vertical ? props.vertical : 'center' };
-  height: 100%;
   width: 100%;
 
   @media screen and (max-width: ${mobile_width}) {
