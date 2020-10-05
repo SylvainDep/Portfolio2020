@@ -96,7 +96,7 @@ const TimelineText = (props) => {
 
   return (
     <TimelineTextBlock className={"experience_content " + isVisible}>
-      <h3><img src={props.data.logo} /></h3>
+      <h3><img src={props.data.logo} alt="logo" /></h3>
       <TimelineDetails>
         <div className="location">
           <FontAwesomeIcon icon={faHome} color="white" size="xs" />

@@ -4,7 +4,6 @@ import { faBriefcase } from "@fortawesome/free-solid-svg-icons";
 import { styles } from '../UI'
 
 import SectionHeader from '../UI/shared/SectionHeader'
-import SectionFooter from '../UI/shared/SectionFooter'
 import PortfolioGallery from './PortfolioGallery'
 
 const {

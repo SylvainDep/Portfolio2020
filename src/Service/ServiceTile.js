@@ -66,7 +66,7 @@ const Tile = styled.div`
 `
 
 const ServiceTile = props => {
-  const { ref, inView, entry } = useInView({
+  const { ref, inView } = useInView({
     threshold: .5,
     triggerOnce: true
   });

@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
-import axios from 'axios'
 import * as emailjs from 'emailjs-com'
 
 import { styles } from '../UI'

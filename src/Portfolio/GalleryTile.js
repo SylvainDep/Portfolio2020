@@ -169,9 +169,7 @@ const GalleryItemContent = styled.div`
   }
 `
 
-const GalleryIcon = styled.a.attrs(props => ({
-  target: "_blank",
-}))`
+const GalleryIcon = styled.div`
   margin-top: 15px;
   display: flex;
   justify-content: center;

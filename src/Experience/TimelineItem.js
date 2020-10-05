@@ -88,7 +88,7 @@ const TimelineItemContainer = styled.div`
 `
 
 const TimelineItem = (props) => {
-  const { ref, inView, entry } = useInView({
+  const { ref, inView } = useInView({
     threshold: .5,
     triggerOnce: true
   });

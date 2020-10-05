@@ -10,7 +10,6 @@ import Resume from "../../assets/misc/Resume - Sylvain Depardieu.pdf";
 import { styles } from '../../UI'
 
 const {
-  constants: { orange },
   uiblocks: { Grid },
   elements: { Button }
 } = styles

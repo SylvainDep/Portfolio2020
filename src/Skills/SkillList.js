@@ -1,6 +1,5 @@
 import React from 'react'
 import styled from 'styled-components'
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useInView } from 'react-intersection-observer';
 
 import SkillItem from './SkillItem'
@@ -8,7 +7,7 @@ import SkillItem from './SkillItem'
 import { styles } from '../UI'
 
 const {
-  constants: { dark_grey, orange, mobile_width }
+  constants: { mobile_width }
 } = styles;
 
 const SkillsContainer = styled.div`
@@ -21,11 +20,11 @@ const SkillsContainer = styled.div`
 `
 
 const SkillList = props => {
-  const { ref, inView, entry } = useInView({
+  const { ref, inView } = useInView({
     threshold: .5,
     triggerOnce: true
   });
-  
+
   return (
     <SkillsContainer ref={ref}>
       <SkillItem title="HTML5/CSS3" level={95} visible={inView} index={1} />

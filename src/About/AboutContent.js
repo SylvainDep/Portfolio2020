@@ -61,22 +61,22 @@ const AboutContent = (props) => {
           <p>I particularly enjoy the feeling of bringing a paper project to life, and making it usable and scalable to see it evolve and meet both owners and final user wishes. This leads me to consider all the aspects of a project in details from the beginning, and to come up with a solution to all of them.</p>
           <SocialLinks>
             <Grid justify="flex-start">
-              <a href="https://www.linkedin.com/in/sylvaindepardieu/" target="_blank">
+              <a href="https://www.linkedin.com/in/sylvaindepardieu/" target="_blank" rel="noopener noreferrer" >
                 <Badge size="30px">
                   <FontAwesomeIcon icon={faLinkedin} />
                 </Badge>
               </a>
-              <a href="https://www.xing.com/profile/Sylvain_Depardieu" target="_blank">
+              <a href="https://www.xing.com/profile/Sylvain_Depardieu" target="_blank" rel="noopener noreferrer" >
                 <Badge size="30px">
                   <FontAwesomeIcon icon={faXing} />
                 </Badge>
               </a>
-              <a href="https://github.com/SylvainDep" target="_blank">
+              <a href="https://github.com/SylvainDep" target="_blank" rel="noopener noreferrer" >
                 <Badge size="30px">
                   <FontAwesomeIcon icon={faGithub} />
                 </Badge>
               </a>
-              <a href="mailto:sylvaindepardieu78@gmail.com" target="_blank">
+              <a href="mailto:sylvaindepardieu78@gmail.com" target="_blank" rel="noopener noreferrer" >
                 <Badge size="30px">
                   <FontAwesomeIcon icon={faEnvelope} />
                 </Badge>

@@ -83,13 +83,12 @@ const Separator = styled.div`
 `
 
 const SectionHeader = props => {
-  const { ref, inView, entry } = useInView({
+  const { ref, inView } = useInView({
     threshold: .5,
     triggerOnce: true
   });
 
   let isVisible = inView ? 'visible' : 'hidden'
-  const transitionDelay = props.index/5
 
   return (
     <SectionHeaderContainer ref={ref}>

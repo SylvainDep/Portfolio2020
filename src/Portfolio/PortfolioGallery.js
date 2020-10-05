@@ -10,7 +10,7 @@ const {
 } = styles;
 
 const PortfolioGallery = props => {
-  const { ref, inView, entry } = useInView({
+  const { ref, inView, /* entry */ } = useInView({
     threshold: .2,
     triggerOnce: true
   });

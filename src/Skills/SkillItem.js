@@ -1,11 +1,10 @@
 import React from 'react'
 import styled from 'styled-components'
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import { styles } from '../UI'
 
 const {
-  constants: { dark_grey, orange, mobile_width }
+  constants: { orange, mobile_width }
 } = styles;
 
 const SkillItemContainer = styled.div`
