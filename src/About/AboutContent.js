@@ -17,7 +17,7 @@ const AboutContentContainer = styled.div`
   padding-left: 10px;
 
   h2 {
-    margin-top: 0
+    margin: 0
 
     @media screen and (max-width: ${mobile_width}) {
       text-align: center;
@@ -31,10 +31,10 @@ const AboutContentContainer = styled.div`
 `
 
 const ProfilePicture = styled.div`
-  flex-basis: 160px;
+  flex-basis: 140px;
   margin-top: 5px;
   margin-right: 20px;
-  height: 160px;
+  height: 140px;
   background: url(${img}) right bottom;
   background-size: cover;
 
@@ -58,7 +58,6 @@ const AboutContent = (props) => {
         <ProfilePicture />
         <ProfileContent>
           <p><b>I’M A WEB DEVELOPER</b> from France living in Hamburg (Germany), where I work as Frontend Developer at Sendesignal. With a background in SEO, content management and Language Studies, I have developped my skills in Frontend development and loved it ever since.</p>
-          <p>I particularly enjoy the feeling of bringing a paper project to life, and making it usable and scalable to see it evolve and meet both owners and final user wishes. This leads me to consider all the aspects of a project in details from the beginning, and to come up with a solution to all of them.</p>
           <SocialLinks>
             <Grid justify="flex-start">
               <a href="https://www.linkedin.com/in/sylvaindepardieu/" target="_blank" rel="noopener noreferrer" >

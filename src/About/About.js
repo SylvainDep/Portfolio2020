@@ -14,8 +14,10 @@ const AboutContainer = styled.div`
   display: flex;
   transform: translateY(-50px);
   background-color: ${dark_grey};
-  width: 100%;
+  width: 800px;
+  max-width: 100%;
   padding: 20px;
+  margin: auto;
 `
 
 class Hero extends Component {

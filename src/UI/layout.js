@@ -15,7 +15,7 @@ const ContentBlock = styled.div`
   width: 100vw;
   background-color: ${props => props.background ? props.background : 'white' };
   color: ${props => props.color ? props.color : '#666' };
-  padding: ${props => props.section ? '70px 0' : '0'};
+  padding: ${props => props.section ? '70px 0' : props.firstsection ? '0 0 70px 0' : '0'};
   position: relative;
   margin-bottom: ${props => props.contact ? '180px' : '0'};
 

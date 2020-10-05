@@ -16,7 +16,7 @@ const {
 const Service = () => {
 
   return (
-    <ContentBlock id="services" background={light_grey} section>
+    <ContentBlock id="services" background={light_grey} firstsection>
       <ContentArea>
         <SectionHeader
           icon={faRocket}
