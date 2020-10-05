@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { useInView } from 'react-intersection-observer';
 
 import SkillItem from './SkillItem'
 
@@ -20,16 +21,21 @@ const SkillsContainer = styled.div`
 `
 
 const SkillList = props => {
+  const { ref, inView, entry } = useInView({
+    threshold: .5,
+    triggerOnce: true
+  });
+  
   return (
-    <SkillsContainer>
-      <SkillItem title="HTML5/CSS3" level={95} />
-      <SkillItem title="Javascript ES6" level={70} />
-      <SkillItem title="ReactJS" level={55} />
-      <SkillItem title="PHP/MySQL" level={40} />
-      <SkillItem title="Git" level={67} />
-      <SkillItem title="Jimdo" level={100} />
-      <SkillItem title="Wordpress" level={58} />
-      <SkillItem title="Photoshop/Illustrator" level={64} />
+    <SkillsContainer ref={ref}>
+      <SkillItem title="HTML5/CSS3" level={95} visible={inView} index={1} />
+      <SkillItem title="Javascript ES6" level={70} visible={inView} index={2} />
+      <SkillItem title="ReactJS" level={55} visible={inView} index={3} />
+      <SkillItem title="PHP/MySQL" level={40} visible={inView} index={4} />
+      <SkillItem title="Git" level={67} visible={inView} index={5} />
+      <SkillItem title="Jimdo" level={100} visible={inView} index={6} />
+      <SkillItem title="Wordpress" level={58} visible={inView} index={7} />
+      <SkillItem title="Photoshop/Illustrator" level={64} visible={inView} index={8} />
     </SkillsContainer>
   )
 }

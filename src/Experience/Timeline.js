@@ -145,8 +145,6 @@ class Timeline extends Component {
     this.setState(prevState => {
       return {expanded: !prevState.expanded}
     });
-
-    console.log(this.state.expanded)
   }
 
   render() {

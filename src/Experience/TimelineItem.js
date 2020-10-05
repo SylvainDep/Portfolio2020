@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import { useInView } from 'react-intersection-observer';
 
 import TimelineText from './TimelineText'
 import TimelineAnchor from './TimelineAnchor'
@@ -87,10 +88,15 @@ const TimelineItemContainer = styled.div`
 `
 
 const TimelineItem = (props) => {
+  const { ref, inView, entry } = useInView({
+    threshold: .5,
+    triggerOnce: true
+  });
+
   return (
-    <TimelineItemContainer>
-      <TimelineText data={props.data}/>
-      <TimelineAnchor data={props.data}/>
+    <TimelineItemContainer ref={ref}>
+      <TimelineText data={props.data} visible={inView} />
+      <TimelineAnchor data={props.data} />
     </TimelineItemContainer>
   )
 }

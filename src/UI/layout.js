@@ -15,7 +15,7 @@ const ContentBlock = styled.div`
   width: 100vw;
   background-color: ${props => props.background ? props.background : 'white' };
   color: ${props => props.color ? props.color : '#666' };
-  padding: ${props => props.section ? '50px 0' : '0'};
+  padding: ${props => props.section ? '70px 0' : '0'};
   position: relative;
   margin-bottom: ${props => props.contact ? '180px' : '0'};
 
@@ -29,7 +29,7 @@ const CustomContentBlock = styled.div`
   background: url(${props => props.bgImg}) no-repeat center center;
   background-size: cover;
   color: ${props => props.color ? props.color : '#666' };
-  padding: ${props => props.section ? '50px 10px' : '0'};
+  padding: ${props => props.section ? '70px 10px' : '0'};
 
   h1, h2, h3 {
     color: ${props => props.color ? props.color : dark_grey };
@@ -86,13 +86,13 @@ const Mask = styled.div`
 `
 
 const AnimWrapper = styled.div`
+  height: 100%;
   width: auto;
   flex-basis: 23%;
 
   @media screen and (max-width: ${mobile_width}) {
     flex-basis: 100%;
     margin: 5px auto;
-    padding: 15px;
   }
 `
 

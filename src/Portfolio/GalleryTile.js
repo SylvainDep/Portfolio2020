@@ -23,6 +23,15 @@ const GalleryItem = styled.a.attrs(props => ({
   position: relative;
   box-shadow: 0px 0px 15px -5px rgba(0,0,0,0.5);
 
+  transition: opacity .25s ease ${props => props.delay}s, transform .25s ease ${props => props.delay}s;
+  transform: translateY(20px);
+  opacity: 0;
+
+  &.visible {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+
   @media screen and (max-width: ${desktop_width}) {
     flex-basis: calc((100% / 3) - 2%);
     padding-bottom: 31%;
@@ -176,8 +185,11 @@ const GalleryIcon = styled.a.attrs(props => ({
 `
 
 const GalleryTile = props => {
+  let isVisible = props.visible ? 'visible' : 'hidden'
+  const transitionDelay = props.index/6
+
   return (
-    <GalleryItem bgImg={props.img} href={props.address} target="_blank">
+    <GalleryItem className={isVisible} delay={transitionDelay} bgImg={props.img} href={props.address} target="_blank">
       <GalleryItemContent>
         <GalleryItemFrame>
           <h3>{props.company}</h3>

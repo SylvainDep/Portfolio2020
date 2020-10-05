@@ -23,8 +23,9 @@ const SkillBar = styled.div`
     content: '';
     display: block;
     height: 5px;
-    width: ${props => props.level}%;
+    width: 0%;
     background-color: ${orange};
+    transition: width .5s ease ${props => props.delay}s;
   }
 
   &:after {
@@ -38,9 +39,20 @@ const SkillBar = styled.div`
     align-items: center;
     position: absolute;
     top: 50%;
-    left: ${props => props.level}%;
+    left: 0%;
     transform: translate(-50%, -50%);
     background-color: ${orange};
+    transition: left .5s ease ${props => props.delay}s;
+  }
+
+  &.visible {
+    &:before {
+      width: ${props => props.level}%;
+    }
+
+    &:after {
+      left: ${props => props.level}%;
+    }
   }
 
   @media screen and (max-width: ${mobile_width}) {
@@ -49,10 +61,13 @@ const SkillBar = styled.div`
 `
 
 const SkillItem = props => {
+  let isVisible = props.visible ? 'visible' : 'hidden'
+  const transitionDelay = props.index/8
+
   return (
     <SkillItemContainer>
       <h3>{props.title}</h3>
-      <SkillBar level={props.level} />
+      <SkillBar  className={isVisible} level={props.level} delay={transitionDelay} />
     </SkillItemContainer>
   )
 }

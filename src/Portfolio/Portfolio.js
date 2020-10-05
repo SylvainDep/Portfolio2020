@@ -21,7 +21,6 @@ class Portfolio extends Component {
             title="My Portfolio"
             text="Here is a sample of various projects I took part in, professional and/or personal" />
           <PortfolioGallery />
-          <SectionFooter />
         </ContentArea>
       </ContentBlock>
     )

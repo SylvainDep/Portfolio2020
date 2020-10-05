@@ -17,6 +17,15 @@ const TimelineTextBlock = styled.div`
   width: calc(50% - 50px);
   position: relative;
 
+  transition: transform 1s ease, opacity 1s ease;
+  opacity: 0;
+  transform: translateY(50px);
+
+  &.visible {
+    opacity: 1;
+    transform: translateY(0px)
+  }
+
   h3 {
     margin: 0;
     height: 2em;
@@ -83,8 +92,10 @@ const Position = styled.p`
 `
 
 const TimelineText = (props) => {
+  let isVisible = props.visible ? 'visible' : 'hidden'
+
   return (
-    <TimelineTextBlock className="experience_content">
+    <TimelineTextBlock className={"experience_content " + isVisible}>
       <h3><img src={props.data.logo} /></h3>
       <TimelineDetails>
         <div className="location">

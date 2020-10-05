@@ -6,11 +6,13 @@ import { useInView } from 'react-intersection-observer';
 import { styles } from '../UI'
 
 const {
-  constants: { dark_grey, orange, mobile_width }
+  constants: { dark_grey, orange, mobile_width },
+  uiblocks: { AnimWrapper }
 } = styles;
 
 const Tile = styled.div`
   flex-basis: 23%;
+  height: 100%;
   box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.20);
   padding: 20px;
   text-align: center;
@@ -72,13 +74,13 @@ const ServiceTile = props => {
   let isVisible = inView ? 'visible' : 'hidden'
   const transitionDelay = props.index/5
   return (
-    <div ref={ref}>
+    <AnimWrapper ref={ref}>
       <Tile className={isVisible} delay={transitionDelay}>
         <FontAwesomeIcon icon={props.icon} color={dark_grey} size="3x" />
         <h3>{props.title}</h3>
         <p>{props.text}</p>
       </Tile>
-    </div>
+    </AnimWrapper>
   )
 }
 

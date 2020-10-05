@@ -8,9 +8,9 @@ import {
 const Button = styled.a`
   background-color: ${props => props.primary ? orange : 'white' };
   color: ${props => props.primary ? 'white' : dark_grey };
-  padding: 13px 35px;
-  margin: 10px;
-  border-radius: 5px;
+  padding: 10px 20px;
+  margin: ${props => props.margin ? props.margin : '10px' };
+  border-radius: 2px;
   cursor: pointer;
   transition-duration: 0.3s;
 

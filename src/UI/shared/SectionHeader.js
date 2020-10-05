@@ -14,6 +14,7 @@ const SectionHeaderContainer = styled.div`
   max-width: 740px;
   margin: auto;
   margin-bottom: 50px;
+  overflow: hidden;
 
   .fromLeft, .fromRight {
     transition: transform .5s ease, opacity .5s ease;
